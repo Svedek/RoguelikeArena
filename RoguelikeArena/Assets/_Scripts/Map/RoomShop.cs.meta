@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b9f2b4f71da88f542911ac63089db80b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - solidWall: {fileID: 5875876022318319971, guid: e0c32731a8930134a970cb066aca9298, type: 3}
+  - doorWall: {fileID: 4587420548595589650, guid: 820c7afd8b437e44c8571f29458f19bb, type: 3}
+  - hallway: {fileID: 7863328806263023644, guid: 80320ca44461e2e48ad93a3eac9d2d4c, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
