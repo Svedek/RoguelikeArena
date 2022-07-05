@@ -2010,6 +2010,10 @@ MonoBehaviour:
   levelText: {fileID: 857085959}
   goldText: {fileID: 982623896}
   resource2Text: {fileID: 957673746}
+  UpgradeOptions:
+  - {fileID: 303345287}
+  - {fileID: 841584335}
+  - {fileID: 364690457}
 --- !u!1 &1731581835
 GameObject:
   m_ObjectHideFlags: 0
