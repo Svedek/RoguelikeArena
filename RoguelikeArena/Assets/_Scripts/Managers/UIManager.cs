@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour {
     void Awake() {
         ReferanceManager.uiManager = this;
         SetDefaultValues();
+        HideUpgradeOptions();
     }
 
     /*
