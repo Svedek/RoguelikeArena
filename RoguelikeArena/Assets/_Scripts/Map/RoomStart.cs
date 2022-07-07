@@ -3,20 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoomStart : MonoBehaviour, Room {
-    private readonly float posMod = 60f;
+public class RoomStart : Room {
 
     private RoomDoor doorRight;
     private RoomDoor doorUp;
     private RoomDoor doorLeft;
     private RoomDoor doorDown;
 
-
-    public void InitializeRoom(Vector2 position) {
-
-        // Move to Location
-        transform.position = position * posMod;
-    }
 
     [SerializeField] GameObject player;
     public void SpawnPlayer() {

@@ -54,6 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\_Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\_Scripts\Managers\UIManager.cs" />
     <Compile Include="Assets\_Scripts\Managers\ReferanceManager.cs" />
     <Compile Include="Assets\_Scripts\Map\Room.cs" />
     <Compile Include="Assets\_Scripts\Map\RoomStart.cs" />
@@ -66,10 +67,8 @@
     <Compile Include="Assets\_Scripts\Map\RoomBase.cs" />
     <Compile Include="Assets\_Scripts\Enemy.cs" />
     <Compile Include="Assets\_Scripts\Managers\PlayerManager.cs" />
-    <Compile Include="Assets\_Scripts\Managers\MainManager.cs" />
-    <Compile Include="Assets\_Scripts\Managers\LevelManager.cs" />
+    <Compile Include="Assets\_Scripts\Managers\Level.cs" />
     <Compile Include="Assets\_Scripts\EnemyRunner.cs" />
-    <Compile Include="Assets\_Scripts\Managers\UIManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
 
+    public static UIManager Instance;
+
+
+
     /*
      * Timers
      * Minimap
@@ -14,7 +18,13 @@ public class UIManager : MonoBehaviour {
      */
 
     void Awake() {
-        ReferanceManager.uiManager = this;
+        // Singleton Setup
+        if (Instance != null) {
+            Debug.LogError("Multiple instances of UIManager!");
+        }
+        Instance = this;
+
+        // Initialize UIManager
         SetDefaultValues();
         HideUpgradeOptions();
     }

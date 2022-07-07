@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoomShop : MonoBehaviour, Room {
-    private readonly float posMod = 60f;
+public class RoomShop : Room {
 
     private Vector2 facing;
 
@@ -13,12 +12,6 @@ public class RoomShop : MonoBehaviour, Room {
     private RoomDoor doorLeft;
     private RoomDoor doorDown;
 
-
-    public void InitializeRoom(Vector2 position) {
-
-        // Move to Location
-        transform.position = position * posMod;
-    }
 
     #region Generation
     [SerializeField] GameObject solidWall, doorWall;

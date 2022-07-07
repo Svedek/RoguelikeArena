@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class PlayerManager { 
+public static class PlayerManager {
 
     // Player Stats - manages how player plays
 
@@ -84,18 +84,22 @@ public static class PlayerManager {
     private readonly static Color[] upgradeColors = {
         new Color(255,0,0), // Damage +
         new Color(0,175,0), // Attack speed + 
+
         new Color(0,175,255), // Move speed +
         new Color(75,75,75), // Defence +
         new Color(150,75,75), // Max health 
+
         new Color(0,0,225), // Exp +
         new Color(175,175,0) // Gold +
         };
     private readonly static string[] upgradeText = {
         "+Dmg", // Damage +
         "+Atk\nSpd", // Attack speed + 
+
         "+Mov\nSpd", // Move speed +
         "+Def", // Defence +
         "+Max\nHp", // Max health 
+
         "+Exp", // Exp +
         "+$$$" // Gold +
         };
