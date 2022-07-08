@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
 
-    public static UIManager Instance;
+    //public static UIManager Instance;
 
 
 
@@ -18,11 +18,13 @@ public class UIManager : MonoBehaviour {
      */
 
     void Awake() {
+        /*
         // Singleton Setup
         if (Instance != null) {
             Debug.LogError("Multiple instances of UIManager!");
         }
-        Instance = this;
+        Instance = this;*/
+        ReferanceManager.uiManager = this;
 
         // Initialize UIManager
         SetDefaultValues();
