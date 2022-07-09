@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
 
+    public static EnemyManager Instance;
+
     private RoomBase currentRoom;
     private List<Enemy> enemylist;
 
     void Awake() {
-        ReferanceManager.enemyManager = this;
+        // Singleton Setup
+        if (Instance != null) {
+            Debug.LogError("Multiple instances of EnemyManager!");
+        }
+        Instance = this;
     }
 
     #region Spawning in room

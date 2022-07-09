@@ -13,7 +13,7 @@ public class RoomBase : Room {
 
             // Start room (spawn enemies)
             var scaling = Random.Range(0, 7);
-            ReferanceManager.enemyManager.SpawnEnemies(scaling, this, facing);
+            EnemyManager.Instance.SpawnEnemies(scaling, this, facing);
 
             // Add room to minimap
 

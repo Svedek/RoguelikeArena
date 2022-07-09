@@ -18,7 +18,7 @@ public class EnemyRunner : MonoBehaviour, Enemy {
     }
 
     void Start() {
-        player = ReferanceManager.player;
+        player = PlayerController.Instance;
     }
     #endregion
 
@@ -31,9 +31,9 @@ public class EnemyRunner : MonoBehaviour, Enemy {
         rb.AddForce(knockback * kbMod, ForceMode2D.Impulse);
     }
     private void Die() {
-        ReferanceManager.enemyManager.EnemyDied(this);
-        PlayerManager.GainExperience(exp);
-        PlayerManager.GainGold(gold);
+        EnemyManager.Instance.EnemyDied(this);
+        PlayerController.Instance.GainExperience(exp);
+        PlayerController.Instance.GainGold(gold);
         Destroy(gameObject);
     }
     #endregion
