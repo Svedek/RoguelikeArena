@@ -53,21 +53,23 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\_Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\_Scripts\Lifeforms\Player\PlayerController.cs" />
     <Compile Include="Assets\_Scripts\Managers\UIManager.cs" />
     <Compile Include="Assets\_Scripts\Map\Room.cs" />
     <Compile Include="Assets\_Scripts\Map\RoomStart.cs" />
     <Compile Include="Assets\_Scripts\Map\RoomShop.cs" />
     <Compile Include="Assets\_Scripts\Map\RoomDoor.cs" />
     <Compile Include="Assets\_Scripts\Managers\EnemyManager.cs" />
-    <Compile Include="Assets\_Scripts\Player\BulletTrail.cs" />
-    <Compile Include="Assets\_Scripts\Health.cs" />
+    <Compile Include="Assets\_Scripts\Lifeforms\Player\BulletTrail.cs" />
+    <Compile Include="Assets\_Scripts\Lifeforms\Health.cs" />
     <Compile Include="Assets\_Scripts\Map\RoomExit.cs" />
     <Compile Include="Assets\_Scripts\Map\RoomBase.cs" />
-    <Compile Include="Assets\_Scripts\Enemy.cs" />
+    <Compile Include="Assets\_Scripts\Managers\LevelManager.cs" />
+    <Compile Include="Assets\_Scripts\Lifeforms\Enemies\Enemy.cs" />
     <Compile Include="Assets\_Scripts\Map\Level.cs" />
-    <Compile Include="Assets\_Scripts\EnemyRunner.cs" />
-    <Compile Include="Assets\LevelManager.cs" />
+    <Compile Include="Assets\_Scripts\Lifeforms\Enemies\EnemyRunner.cs" />
+    <Compile Include="Assets\_Scripts\Map\Interactable\Interactable.cs" />
+    <Compile Include="Assets\_Scripts\Map\Interactable\Exit.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

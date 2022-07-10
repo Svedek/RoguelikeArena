@@ -372,7 +372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  moveSpeed: 25
+  baseSpeed: 20
   rollSpeedMod: 1.5
   rollTime: 0.2
   rollDelay: 0.5

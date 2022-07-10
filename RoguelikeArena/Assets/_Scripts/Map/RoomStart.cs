@@ -8,7 +8,11 @@ public class RoomStart : Room {
     [SerializeField] GameObject player;
 
     public void SpawnPlayer() {
-        Instantiate(player, transform.position, Quaternion.identity);
+        if (PlayerController.Instance == null) {
+            Instantiate(player, transform.position, Quaternion.identity);
+        } else {
+            PlayerController.Instance.transform.position = transform.position;
+        }
     }
 
 

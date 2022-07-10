@@ -15,7 +15,7 @@ public class Level : MonoBehaviour {
     }
 
     private readonly float startVarriance = 0.6f; // Determines % away from center that start can spawn
-    private readonly int maxRooms = 12;
+    private readonly int maxRooms = 16;
 
     public class Position {
         public int x;
