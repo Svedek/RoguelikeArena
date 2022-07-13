@@ -4,10 +4,10 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - roomBase: {fileID: 3006788128350700090, guid: e74dccf6b319aef4bae5fdb1fe3a47a8, type: 3}
-  - roomShop: {fileID: 7842270517951285162, guid: 180bc23f814c9494087d1aa83997af0a, type: 3}
-  - roomExit: {fileID: 8064117653803678909, guid: 73fe6bca238361d408802f93e68555a1, type: 3}
-  - roomStart: {fileID: 2435629169129911192, guid: c01c7fe47e46e854f8c05417e8619211, type: 3}
+  - roomBase: {instanceID: 0}
+  - roomShop: {instanceID: 0}
+  - roomExit: {instanceID: 0}
+  - roomStart: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

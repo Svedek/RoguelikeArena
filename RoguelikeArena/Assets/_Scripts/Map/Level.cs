@@ -39,7 +39,7 @@ public class Level : MonoBehaviour {
     // scaling - difficulty scaling
     private void InitiateArena(int depth, float scaling) {
         // Calculate bounds
-        var rooms = 3 + (int)(depth + Mathf.Sqrt(scaling));
+        var rooms = 5 + (int)(depth + Mathf.Sqrt(scaling));
         roomCount = rooms >= maxRooms ? maxRooms : rooms;
 
         var bounds = 1 +  2 * (int) Mathf.Sqrt(roomCount);
@@ -184,4 +184,11 @@ public class Level : MonoBehaviour {
         RoomStart start = (RoomStart) map[startPos];
         start.SpawnPlayer();
     }
+
+
+    #region Level Util
+    [Header("Level Util")]
+    public GameObject player;
+    public GameObject solidWall, doorWall, hallway;
+    #endregion
 }

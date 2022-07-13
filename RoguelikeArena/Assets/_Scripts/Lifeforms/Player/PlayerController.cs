@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour, Health {
+public class PlayerController : Health {
 
     public static PlayerController Instance;
 
     #region Referances
     Camera cam;
-    Rigidbody2D rb;
-    void Awake() {
+    protected override void Awake() {
+        base.Awake();
+
         // Set referance in referance manager
         if (Instance != null) {
             Destroy(gameObject);
@@ -18,7 +19,6 @@ public class PlayerController : MonoBehaviour, Health {
 
         // Get refferances
         cam = GetComponentInChildren<Camera>();
-        rb = GetComponent<Rigidbody2D>();
 
         // Initialize Experience
         Initialize();
@@ -71,13 +71,11 @@ public class PlayerController : MonoBehaviour, Health {
 #endregion
 
     #region Health
-    [Header("Health")]
-    [SerializeField] private float health;
-    public void TakeDamage(float damage, Vector2 kbDir) {
+    public override void TakeDamage(float damage, Vector2 kbDir) {
         if ((health -= damage) <= 0) Die();
         // TAKE KNOCKBACK
     }
-    private void Die() {
+    protected override void Die() {
         // Perish
         print("Player Died");
     }
@@ -93,7 +91,7 @@ public class PlayerController : MonoBehaviour, Health {
 
         CalculateMovement();
 
-        HandleUpgrades();
+        CalculateActions(); // Input not used in movement/attack gets processessed here
 
         Attack();
 
@@ -124,7 +122,7 @@ public class PlayerController : MonoBehaviour, Health {
             y = Input.GetAxisRaw("Vertical"),
             rollPressed = Input.GetButtonDown("Roll"),
             attackPressed = Input.GetButton("Fire"),
-            interactPressed = Input.GetButton("Interact"),
+            interactPressed = Input.GetButtonDown("Interact"),
             mousePos = cam.ScreenToWorldPoint(Input.mousePosition),
             upgradeSelected = upgSel,
         };
@@ -173,6 +171,22 @@ public class PlayerController : MonoBehaviour, Health {
         rolling = false;
         yield return new WaitForSeconds(rollDelay - rollTime);
         rollAvailable = true;
+    }
+
+    #endregion
+
+    #region Actions
+    private void CalculateActions() {
+        // TODO Move roll Into here
+
+        if (input.upgradeSelected != -1 && upgradePoints > 0) {
+            ApplyUpgrade();
+        }
+
+        if (input.interactPressed) {
+            Interact();
+        }
+
     }
 
     #endregion
@@ -257,19 +271,13 @@ public class PlayerController : MonoBehaviour, Health {
     private int upgradePoints = 0;
     private int[] ids;
 
-    private void HandleUpgrades() {
-        if (input.upgradeSelected != -1 && upgradePoints > 0) {
-            ApplyUpgrade();
-        }
-    }
-
     public void GainExperience(float experience) {
         Debug.Log("cXp: " + currentExp + " XpG: " + experience + " RXp: " + requiredExp);
-        if ((currentExp += (experience * Stats.GetExpMod())) >= requiredExp) {
+        currentExp += experience * Stats.GetExpMod();
+        while (currentExp >= requiredExp) {
             // Handle Experience
             currentExp -= requiredExp;
             LevelUp();
-            GainExperience(0f); // Allows for multiple level ups
 
         }
         // Update UI
@@ -422,10 +430,10 @@ public class PlayerController : MonoBehaviour, Health {
 
     private void ActivateInteractionPrompt() {
         // TODO VFX
-        interactionPrompt.enabled = false;
+        interactionPrompt.enabled = true;
     }
     private void DisableInteractionPrompt() {
-        interactionPrompt.enabled = true;
+        interactionPrompt.enabled = false;
     }
     #endregion
 }

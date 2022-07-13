@@ -13,14 +13,17 @@ public class Room : MonoBehaviour {
 
     protected Vector2 facing;
 
+    protected Level level;
+    private void Awake() {
+        level = GetComponentInParent<Level>();
+    }
+
     public void InitializeRoom(Vector2 position) {
         // Move to Location
         transform.position = position * posMod;
     }
 
     #region Generation
-    [Header("Generation")]
-    [SerializeField] GameObject solidWall, doorWall, hallway;
     private readonly float wallDistance = 20f;
     private readonly float hallwayDistance = 30f;
     // Creates hallway and both associating doorways
@@ -59,28 +62,28 @@ public class Room : MonoBehaviour {
                 break;
         }
 
-        GameObject hallwayObject = Instantiate(hallway, transform);
+        GameObject hallwayObject = Instantiate(level.hallway, transform);
         hallwayObject.transform.localPosition = dir * hallwayDistance;
         hallwayObject.transform.rotation = Quaternion.Euler(angle);
     }
     public void CreateWalls() {
         if (doorRight == null) {
-            GameObject current = Instantiate(solidWall, transform);
+            GameObject current = Instantiate(level.solidWall, transform);
             current.transform.localPosition = Vector2.right * wallDistance;
             current.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         }
         if (doorUp == null) {
-            GameObject current = Instantiate(solidWall, transform);
+            GameObject current = Instantiate(level.solidWall, transform);
             current.transform.localPosition = Vector2.up * wallDistance;
             current.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90f));
         }
         if (doorLeft == null) {
-            GameObject current = Instantiate(solidWall, transform);
+            GameObject current = Instantiate(level.solidWall, transform);
             current.transform.localPosition = Vector2.left * wallDistance;
             current.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 180f));
         }
         if (doorDown == null) {
-            GameObject current = Instantiate(solidWall, transform);
+            GameObject current = Instantiate(level.solidWall, transform);
             current.transform.localPosition = Vector2.down * wallDistance;
             current.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 270f));
         }
@@ -106,26 +109,26 @@ public class Room : MonoBehaviour {
     }
 
     private void CreateRightDoor() {
-        GameObject current = Instantiate(doorWall, transform);
+        GameObject current = Instantiate(level.doorWall, transform);
         current.transform.localPosition = Vector2.right * wallDistance;
         current.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0f));
         doorRight = current.GetComponent<RoomDoor>();
     }
 
     private void CreateUpDoor() {
-        GameObject current = Instantiate(doorWall, transform);
+        GameObject current = Instantiate(level.doorWall, transform);
         current.transform.localPosition = Vector2.up * wallDistance;
         current.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90f));
         doorUp = current.GetComponent<RoomDoor>();
     }
     private void CreateLeftDoor() {
-        GameObject current = Instantiate(doorWall, transform);
+        GameObject current = Instantiate(level.doorWall, transform);
         current.transform.localPosition = Vector2.left * wallDistance;
         current.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 180f));
         doorLeft = current.GetComponent<RoomDoor>();
     }
     private void CreateDownDoor() {
-        GameObject current = Instantiate(doorWall, transform);
+        GameObject current = Instantiate(level.doorWall, transform);
         current.transform.localPosition = Vector2.down * wallDistance;
         current.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 270f));
         doorDown = current.GetComponent<RoomDoor>();

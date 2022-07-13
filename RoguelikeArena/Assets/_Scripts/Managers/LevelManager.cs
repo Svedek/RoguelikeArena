@@ -15,13 +15,9 @@ public class LevelManager : MonoBehaviour {
         Instance = this;
 
         // Temperary
-        CreateLevel(300, 10f);
+        CreateLevel();
     }
     #endregion
-
-    private void Test() {
-        print(scaling);
-    }
 
     #region Level Management
     private Level level;
@@ -36,8 +32,7 @@ public class LevelManager : MonoBehaviour {
             return (gameTime / 10) + (floor * 3);
         }
     }
-
-    public void CreateLevel(int floor, float scaling) {
+    public void CreateLevel() {
         ++floor;
 
         ClearLevel();
