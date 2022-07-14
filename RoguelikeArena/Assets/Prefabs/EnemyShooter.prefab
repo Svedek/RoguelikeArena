@@ -144,3 +144,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8278d129177c6140b58be4bd46d8091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 5
+  kbMod: 0
+  baseGold: 3
+  baseExp: 2
+  moveSpeed: 40
+  preferedDistance: 8
+  preferedDistanceTolerance: 3
+  preferedDistanceSlowDistance: 5
+  sideMovementWeight: 0.5
+  damage: 0
+  knockback: 0
