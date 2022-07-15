@@ -6,6 +6,7 @@ public class ShooterEnemy : Enemy {
 
     void Update() {
         CalculateMove();
+        CalculateAttack();
     }
     void FixedUpdate() {
         Move();
@@ -19,12 +20,13 @@ public class ShooterEnemy : Enemy {
     [SerializeField] private float preferedDistanceSlowDistance; // Greater than preferedDistanceTolerance
     [SerializeField] private float sideMovementWeight; // TODO multiplied by -1 to switch direction (on colision)
     private Vector2 moveDir;
+    private float distanceToPlayer;
     private void CalculateMove() {
         // Calculate vector in line with player
-        Vector2 playerVector = (PlayerController.Instance.transform.position - transform.position);
+        Vector2 playerVector = PlayerController.Instance.transform.position - transform.position;
         var normPV = playerVector.normalized; // nessesary for 
-        var pvMag = playerVector.magnitude;
-        var dist = pvMag - preferedDistance;
+        distanceToPlayer = playerVector.magnitude;
+        var dist = distanceToPlayer - preferedDistance;
 
         if (Mathf.Abs(dist) <= preferedDistanceTolerance) {
             playerVector = Vector2.zero;
@@ -51,17 +53,36 @@ public class ShooterEnemy : Enemy {
     private void Move() {
         rb.AddForce(moveDir, ForceMode2D.Force);
     }
+
+    private static readonly int enemyLayer = 8, terrainLayer = 9, playerLayer = 10;
+    private void OnCollisionEnter2D(Collision2D collision) {
+        var colLayer = collision.gameObject.layer;
+        if (colLayer == enemyLayer || colLayer == terrainLayer || colLayer == playerLayer) {
+            sideMovementWeight *= -1;
+        }
+    }
     #endregion
 
     #region attack
     [Header("Attack")]
     [SerializeField] private float damage;
+    [SerializeField] private float attackDelay;
+    [SerializeField] private float attackRange;
     [SerializeField] private float knockback;
-    private void OnCollisionEnter2D(Collision2D collision) {
-        PlayerController play = collision.gameObject.GetComponent<PlayerController>();
-        if (play != null) {
-            play.TakeDamage(damage, moveDir.normalized * knockback);
+    private float nextAttack;
+    
+    private void CalculateAttack() {
+        if (distanceToPlayer <= attackRange) {
+            if (nextAttack <= Time.time) {
+                Shoot();
+            }
         }
     }
+
+    private void Shoot() {
+        Vector2 playerVector = PlayerController.Instance.transform.position - transform.position;
+        Quaternion bulletRotation = Quaternion.Euler(playerVector);
+    }
+
     #endregion
 }

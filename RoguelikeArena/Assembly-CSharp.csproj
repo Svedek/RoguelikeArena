@@ -54,6 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\_Scripts\Lifeforms\Player\PlayerController.cs" />
+    <Compile Include="Assets\_Scripts\Lifeforms\Enemies\ShooterEnemy.cs" />
     <Compile Include="Assets\_Scripts\Managers\UIManager.cs" />
     <Compile Include="Assets\_Scripts\Map\Room.cs" />
     <Compile Include="Assets\_Scripts\Map\RoomStart.cs" />
@@ -68,10 +69,10 @@
     <Compile Include="Assets\_Scripts\Map\RoomBase.cs" />
     <Compile Include="Assets\_Scripts\Managers\LevelManager.cs" />
     <Compile Include="Assets\_Scripts\Lifeforms\Enemies\Enemy.cs" />
+    <Compile Include="Assets\_Scripts\Managers\GameplayManager.cs" />
     <Compile Include="Assets\_Scripts\Map\Level.cs" />
     <Compile Include="Assets\_Scripts\Lifeforms\Enemies\RusherEnemy.cs" />
-    <Compile Include="Assets\_Scripts\Lifeforms\Enemies\ShooterEnemy.cs" />
-    <Compile Include="Assets\_Scripts\Managers\GameplayManager.cs" />
+    <Compile Include="Assets\_Scripts\Bullets\Bullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

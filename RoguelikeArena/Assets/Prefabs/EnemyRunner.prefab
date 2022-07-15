@@ -146,6 +146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   kbMod: 0
+  baseGold: 3
+  baseExp: 2
   moveSpeed: 50
   damage: 1
   knockback: 5
