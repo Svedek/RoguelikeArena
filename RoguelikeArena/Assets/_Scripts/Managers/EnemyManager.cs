@@ -37,43 +37,68 @@ public class EnemyManager : MonoBehaviour {
         List<EnemyData> toSpawn = new List<EnemyData>();
         switch (spawnVal) {
             case float a when (a <= 2):
-                toSpawn.Add(new EnemyData(enemyPrefabs[0], FindPosition(new Vector2(-10, -10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[0], FindPosition(new Vector2(-10, 0), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[0], FindPosition(new Vector2(-10, 10), enterDir)));
-                print("spawn 1-1");
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, -10), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, 0), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, 10), enterDir)));
+                print("spawn 1");
                 break;
             case float a when (a <= 4):
-                toSpawn.Add(new EnemyData(enemyPrefabs[0], FindPosition(new Vector2(-10, -10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[0], FindPosition(new Vector2(-5, -10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[0], FindPosition(new Vector2(-10, 0), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[0], FindPosition(new Vector2(-5, 10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[0], FindPosition(new Vector2(-10, 10), enterDir)));
-                print("spawn 1-2");
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-10, -10), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-5, -10), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-10, 0), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-5, 10), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-10, 10), enterDir)));
+                print("spawn 2");
                 break;
             case float a when (a <= 6):
-                toSpawn.Add(new EnemyData(enemyPrefabs[0], FindPosition(new Vector2(-10, -15), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[0], FindPosition(new Vector2(-10, -10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[0], FindPosition(new Vector2(-5, -10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[0], FindPosition(new Vector2(-10, 0), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[0], FindPosition(new Vector2(-5, 10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[0], FindPosition(new Vector2(-10, 10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[0], FindPosition(new Vector2(-10, 15), enterDir)));
-                print("spawn 1-3");
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, -10), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-5, -10), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, 0), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-5, 10), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, 10), enterDir)));
+                print("spawn 3");
                 break;
             case float a when (a <= 8):
-                print("spawn 2-1");
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, -10), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Shooter], FindPosition(new Vector2(-5, -10), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, 0), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Shooter], FindPosition(new Vector2(-5, 10), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, 10), enterDir)));
+                print("spawn 4");
                 break;
             case float a when (a <= 10):
-                print("spawn 2-2");
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-5, -15), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-0, -15), enterDir)));
+
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-10, -10), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-5, -10), enterDir)));
+
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-10, -5), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-10, 0), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-10, 5), enterDir)));
+
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-10, 10), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-5, 10), enterDir)));
+
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-5, 15), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-0, 15), enterDir)));
+                print("spawn 5");
                 break;
             case float a when (a <= 12):
-                print("spawn 2-3");
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, -15), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Shooter], FindPosition(new Vector2(-10, -10), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-5, -10), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, 0), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-5, 10), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Shooter], FindPosition(new Vector2(-10, 10), enterDir)));
+                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, 15), enterDir)));
+                print("spawn 6");
                 break;
             case float a when (a <= 14):
-                print("spawn 3-1");
+                print("spawn 7");
                 break;
             case float a when (a <= 16):
-                print("spawn 3-2");
+                print("spawn 8");
                 break;
         }
         enemylist = new List<Enemy>();
@@ -108,4 +133,11 @@ public class EnemyManager : MonoBehaviour {
         currentRoom.RoomCleared();
     }
     #endregion
+
+
+    private enum EnemyID {
+        Runner,
+        Swarmer,
+        Shooter
+    }
 }

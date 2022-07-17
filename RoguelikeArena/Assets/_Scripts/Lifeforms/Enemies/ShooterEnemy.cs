@@ -66,22 +66,30 @@ public class ShooterEnemy : Enemy {
     #region attack
     [Header("Attack")]
     [SerializeField] private float damage;
+    [SerializeField] private float knockback;
+
     [SerializeField] private float attackDelay;
     [SerializeField] private float attackRange;
-    [SerializeField] private float knockback;
+
+    [SerializeField] private GameObject bullet;
+    [SerializeField] private float bulletSpawnOffset;
     private float nextAttack;
     
     private void CalculateAttack() {
         if (distanceToPlayer <= attackRange) {
             if (nextAttack <= Time.time) {
                 Shoot();
+                nextAttack = Time.time + attackDelay;
             }
         }
     }
 
+    
     private void Shoot() {
-        Vector2 playerVector = PlayerController.Instance.transform.position - transform.position;
-        Quaternion bulletRotation = Quaternion.Euler(playerVector);
+        Vector3 playerVector = PlayerController.Instance.transform.position - transform.position;
+        Quaternion bulletRotation = Quaternion.LookRotation(Vector3.forward, playerVector);
+
+        Instantiate(bullet, transform.position + playerVector.normalized * bulletSpawnOffset, bulletRotation);
     }
 
     #endregion

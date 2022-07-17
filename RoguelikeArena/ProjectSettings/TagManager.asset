@@ -17,8 +17,8 @@ TagManager:
   - Terrain
   - Player
   - 
-  - 
-  - 
+  - Bullets
+  - GFX
   - 
   - 
   - 
@@ -52,6 +52,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 445289719
+    locked: 0
+  - name: Bullets
+    uniqueID: 3940460779
     locked: 0
   - name: FX
     uniqueID: 2299280535
