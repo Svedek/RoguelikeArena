@@ -26,8 +26,7 @@ public class PlayerController : Health {
     #endregion
 
     #region Player Stats
-    private static class Stats {
-        private static float[] increaseAmmount =  {
+    private static float[] increaseAmmount =  {
             1.25f, // damageMod
             0.8f, // attackSpeedMod
 
@@ -39,7 +38,7 @@ public class PlayerController : Health {
             1.5f, // goldMod
         };
 
-        private static float[] stats = {
+    public static float[] stats { get; } = {
             1f, // damageMod
             1f, // attackSpeedMod
 
@@ -51,32 +50,37 @@ public class PlayerController : Health {
             1f, // goldMod
         };
 
-        public static void ApplyUpgrade(int id) {
-            stats[id] *= increaseAmmount[id];
-        }
+    public enum StatID {
+        damage,
+        attackSpeed,
 
-        #region Getters
-        public static float GetDamageMod() => stats[0];
-        public static float GetAttackSpeedMod() => stats[1];
+        moveSpeed,
+        defense,
+        maxHealth,
 
-        public static float GetMoveMod() => stats[2];
-        public static float GetDefense() => stats[3];
-        public static float GetMaxHealth() => stats[4];
-
-        public static float GetExpMod() => stats[5];
-        public static float GetGoldMod() => stats[6];
-        #endregion
+        expMod,
+        goldMod,
     }
 
-#endregion
+    public static void ApplyUpgrade(int id) {
+        stats[id] *= increaseAmmount[id];
+    }
+
+    #endregion
 
     #region Health
-    public override void TakeDamage(float damage, Vector2 kbDir) {
+    public override bool TakeDamage(float damage, Vector2 kbDir) {
         if ((health -= damage) <= 0) Die();
-        // TAKE KNOCKBACK
+        // TODO TAKE KNOCKBACK
+
+        // Update UI
+        UIManager.Instance.UpdateHealth(health, stats[(int) StatID.maxHealth]);
+
+
+        return true;
     }
     protected override void Die() {
-        // Perish
+        // TODO Perish
         print("Player Died");
     }
     #endregion
@@ -147,7 +151,7 @@ public class PlayerController : Health {
         }
 
         // Calculate modifiers
-        var moveMod = baseSpeed * Stats.GetMoveMod();
+        var moveMod = baseSpeed * stats[(int)StatID.moveSpeed];
         moveMod *= rolling ? rollSpeedMod : 1f;
 
         // Finalize moveDir
@@ -204,7 +208,7 @@ public class PlayerController : Health {
 
     private float lastAttack;
     private void Attack() {
-        if (input.attackPressed && lastAttack + (weaponStats.fireRate * Stats.GetAttackSpeedMod()) <= Time.time) {
+        if (input.attackPressed && lastAttack + (weaponStats.fireRate * stats[(int)StatID.attackSpeed]) <= Time.time) {
             // Handle bullet
             Fire();
             lastAttack = Time.time;
@@ -225,7 +229,7 @@ public class PlayerController : Health {
             // Apply hit
             Health target = hitInfo.transform.GetComponent<Health>();
             if (target != null) {
-                target.TakeDamage(weaponStats.damage * Stats.GetDamageMod(), fireDir*weaponStats.knockback);
+                target.TakeDamage(weaponStats.damage * stats[(int)StatID.damage], fireDir*weaponStats.knockback);
             }
 
             // Make trail
@@ -273,7 +277,7 @@ public class PlayerController : Health {
 
     public void GainExperience(float experience) {
         Debug.Log("cXp: " + currentExp + " XpG: " + experience + " RXp: " + requiredExp);
-        currentExp += experience * Stats.GetExpMod();
+        currentExp += experience * stats[(int)StatID.expMod];
         while (currentExp >= requiredExp) {
             // Handle Experience
             currentExp -= requiredExp;
@@ -319,7 +323,7 @@ public class PlayerController : Health {
 
     private void ApplyUpgrade() {
         var id = ids[input.upgradeSelected];
-        Stats.ApplyUpgrade(id);
+        ApplyUpgrade(id);
         upgradesActive = false;
 
         print("upgradePoints: " + upgradePoints + "   id: " + id);
@@ -391,9 +395,10 @@ public class PlayerController : Health {
 
     #region Gold
     public void GainGold(int addGold) {
-        gold += (int)(addGold * Stats.GetGoldMod());
+        gold += (int)(addGold * stats[(int)StatID.goldMod]);
 
         // Update UI
+        UIManager.Instance.UpdateGold(gold);
     }
 
     public bool TryPurchace(int cost) {

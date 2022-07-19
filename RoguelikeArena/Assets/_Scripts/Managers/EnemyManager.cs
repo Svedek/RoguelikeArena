@@ -33,96 +33,77 @@ public class EnemyManager : MonoBehaviour {
         currentRoom = room;
         Vector2 roomCenter = room.transform.position;
 
-        float spawnVal = Random.Range(Mathf.Sqrt(scaling), scaling);
-        List<EnemyData> toSpawn = new List<EnemyData>();
-        switch (spawnVal) {
-            case float a when (a <= 2):
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, -10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, 0), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, 10), enterDir)));
-                print("spawn 1");
-                break;
-            case float a when (a <= 4):
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-10, -10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-5, -10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-10, 0), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-5, 10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-10, 10), enterDir)));
-                print("spawn 2");
-                break;
-            case float a when (a <= 6):
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, -10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-5, -10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, 0), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-5, 10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, 10), enterDir)));
-                print("spawn 3");
-                break;
-            case float a when (a <= 8):
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, -10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Shooter], FindPosition(new Vector2(-5, -10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, 0), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Shooter], FindPosition(new Vector2(-5, 10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, 10), enterDir)));
-                print("spawn 4");
-                break;
-            case float a when (a <= 10):
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-5, -15), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-0, -15), enterDir)));
+        float spawnVal = Random.Range(scaling * 0.75f, scaling*1.25f);
 
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-10, -10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-5, -10), enterDir)));
+        List<GameObject> toSpawn = new List<GameObject>();
 
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-10, -5), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-10, 0), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-10, 5), enterDir)));
+        while (spawnVal > 5f) {
+            float currentSpawnVal = Random.Range(spawnVal/4, spawnVal);
+            int spawnType = SpawnType(currentSpawnVal);
 
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-10, 10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-5, 10), enterDir)));
+            var cost = enemyCostList[spawnType];
+            int count = (int) currentSpawnVal / cost;
+            spawnVal -= count * cost;
+            for (int i = 0; i < count; i++) {
+                toSpawn.Add(enemyPrefabs[spawnType]);
+            }
 
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-5, 15), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Swarmer], FindPosition(new Vector2(-0, 15), enterDir)));
-                print("spawn 5");
-                break;
-            case float a when (a <= 12):
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, -15), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Shooter], FindPosition(new Vector2(-10, -10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-5, -10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, 0), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-5, 10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Shooter], FindPosition(new Vector2(-10, 10), enterDir)));
-                toSpawn.Add(new EnemyData(enemyPrefabs[(int)EnemyID.Runner], FindPosition(new Vector2(-10, 15), enterDir)));
-                print("spawn 6");
-                break;
-            case float a when (a <= 14):
-                print("spawn 7");
-                break;
-            case float a when (a <= 16):
-                print("spawn 8");
-                break;
         }
+
+        // Find Spawn Area
+        Vector2[] spawnBounds = FindArea(enterDir);
+
+
+        // Spawn Enemies
         enemylist = new List<Enemy>();
         for (int i = 0; i < toSpawn.Count; i++) {
-            GameObject current = Instantiate(toSpawn[i].enemyObject, transform);
-            current.transform.position = toSpawn[i].position;
+            Vector2 pos = new Vector2(Random.Range(spawnBounds[0].x, spawnBounds[1].x), Random.Range(spawnBounds[0].y, spawnBounds[1].y));
+            GameObject current = Instantiate(toSpawn[i], transform);
+            current.transform.position = pos;
             enemylist.Add(current.GetComponent<Enemy>());
         }
     }
 
-    private Vector2 FindPosition(Vector2 position, Vector2 dir) {
+
+    private int SpawnType(float spawnVal) {
+        switch(spawnVal) {
+            case float a when (a < enemyCostList[1]):
+                return 0;
+            case float a when (a < enemyCostList[2]):
+                return Random.Range(0,2);
+        }
+
+        return Random.Range(0, enemyCostList.Length); ;
+     }
+
+
+    private readonly float roomSize = 18f, entryPadding = 9f;
+    private Vector2[] FindArea(Vector2 dir) {
         Vector2 roomPos = currentRoom.transform.position;
-        switch(dir.x,dir.y) {
+
+        Vector2 low = roomPos + Vector2.one * -roomSize;
+        Vector2 high = roomPos + Vector2.one * roomSize;
+        Vector2[] ret = {
+            low,
+            high
+        };
+
+        switch (dir.x, dir.y) {
             case (1, 0): // Right
-                return roomPos + position;
+                ret[1].x -= entryPadding;
+                return ret;
             case (0, 1): // Up
-                return roomPos + new Vector2(-position.y, position.x);
+                ret[1].y -= entryPadding;
+                return ret;
             case (-1, 0): // Left
-                return roomPos + new Vector2(-position.x, -position.y);
+                ret[0].x += entryPadding;
+                return ret;
             case (0, -1): // Down
-                return roomPos + new Vector2(position.y, -position.x);
+                ret[0].y += entryPadding;
+                return ret;
         }
         Debug.LogError("Incorrect dir in ModifyPosition");
-        return new Vector2(-1, -1);
+        return ret;
     }
 
     public void EnemyDied(Enemy enemy) {
@@ -134,10 +115,21 @@ public class EnemyManager : MonoBehaviour {
     }
     #endregion
 
+    #region EnemyIDing and cost
+    private static readonly int[] enemyCostList = CostList();
+    private static int[] CostList() {
+        var costList = new int[System.Enum.GetValues(typeof(EnemyID)).Length];
 
+        costList[(int)EnemyID.Swarmer] = 1;
+        costList[(int)EnemyID.Runner] = 2;
+        costList[(int)EnemyID.Shooter] = 5;
+
+        return costList;
+    }
     private enum EnemyID {
-        Runner,
         Swarmer,
+        Runner,
         Shooter
     }
+    #endregion
 }

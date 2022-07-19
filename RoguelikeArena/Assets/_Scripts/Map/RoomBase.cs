@@ -12,7 +12,7 @@ public class RoomBase : Room {
             CloseDoors();
 
             // Start room (spawn enemies)
-            var scaling = Random.Range(0f, 12f);
+            var scaling = Random.Range(20f, 50f); // TODO - REMOVE, FOR TESTING PURPOSES
             EnemyManager.Instance.SpawnEnemies(scaling, this, facing);
 
             // Add room to minimap

@@ -5,13 +5,11 @@ using UnityEngine;
 public class Enemy : Health {
 
     // Base stats
-    [SerializeField] protected int baseGold = 3;
-    [SerializeField] protected float baseExp = 2f;
+    [SerializeField] protected int baseGold;
+    [SerializeField] protected float baseExp;
 
     protected override void Awake() {
         base.Awake();
-
-
     }
 
     protected override void Die() {

@@ -58,10 +58,10 @@ public class Level : MonoBehaviour {
         ArrayList endPositions;
         do {
             arena = new Position[bounds, bounds];
-            print("roomCount: " + roomCount);
-            print("bounds: " + bounds);
-            print("startPos x: " + startPos.x);
-            print("startPos y: " + startPos.y);
+            // print("roomCount: " + roomCount);
+            // print("bounds: " + bounds);
+            // print("startPos x: " + startPos.x);
+            // print("startPos y: " + startPos.y);
 
             endPositions = new ArrayList(bounds ^ 2);
             ArrayList toPlace = new ArrayList(bounds ^ 2) {
@@ -73,7 +73,7 @@ public class Level : MonoBehaviour {
                 int index = Random.Range(0, toPlace.Count);
                 Position current = (Position) toPlace.ToArray()[index];
                 toPlace.RemoveAt(index);
-                print("i: " + i + ", toPlaceCount: " + toPlace.Count + ", index: " + index + ", pos = " + current.x + "," + current.y);
+                // print("i: " + i + ", toPlaceCount: " + toPlace.Count + ", index: " + index + ", pos = " + current.x + "," + current.y);
 
                 if (arena[current.x,current.y] == null) {
                     arena[current.x, current.y] = current;
@@ -107,13 +107,13 @@ public class Level : MonoBehaviour {
         // Find special rooms
         // Exit Room
         int temp = Random.Range(0, endPositions.Count);
-        print("Exit index: " + temp);
+        // print("Exit index: " + temp);
         Position exitPos = (Position)endPositions.ToArray()[temp];
         endPositions.RemoveAt(temp); // remove so no 2 spec rooms are assigned the same position
 
         // Shop Room
         temp = Random.Range(0, endPositions.Count); // BUG SHOP AND EXIT HAVE SAME POSITION
-        print("Shop index: " + temp);
+        // print("Shop index: " + temp);
         Position shopPos = (Position)endPositions.ToArray()[temp];
         endPositions.RemoveAt(temp);
 
@@ -129,7 +129,7 @@ public class Level : MonoBehaviour {
 
         var endPositionArray = endPositions.ToArray();
 
-        print("endPositionArray len: " + endPositionArray.Length);
+        // print("endPositionArray len: " + endPositionArray.Length);
         for (int i = 0; i < endPositionArray.Length; i++) {
             Position current = (Position) endPositionArray[i];
             while (current != null && !map.ContainsKey(current)) {

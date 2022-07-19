@@ -14,9 +14,10 @@ public class Health : MonoBehaviour {
     [SerializeField] protected float health;
     [SerializeField] protected float kbMod;
 
-    public virtual void TakeDamage(float damage, Vector2 knockback) {
+    public virtual bool TakeDamage(float damage, Vector2 knockback) {
         if ((health -= damage) <= 0) Die();
         rb.AddForce(knockback * kbMod, ForceMode2D.Impulse);
+        return true;
     }
     protected virtual void Die() {
         Debug.LogError("Die must be overwritten!");
