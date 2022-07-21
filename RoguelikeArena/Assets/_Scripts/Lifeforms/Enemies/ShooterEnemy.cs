@@ -65,13 +65,11 @@ public class ShooterEnemy : Enemy {
 
     #region attack
     [Header("Attack")]
-    [SerializeField] private float damage;
-    [SerializeField] private float knockback;
-
     [SerializeField] private float attackDelay;
     [SerializeField] private float attackRange;
 
     [SerializeField] private GameObject bullet;
+    [SerializeField] private float damage;
     [SerializeField] private float bulletSpawnOffset;
     private float nextAttack;
     
@@ -89,7 +87,8 @@ public class ShooterEnemy : Enemy {
         Vector3 playerVector = PlayerController.Instance.transform.position - transform.position;
         Quaternion bulletRotation = Quaternion.LookRotation(Vector3.forward, playerVector);
 
-        Instantiate(bullet, transform.position + playerVector.normalized * bulletSpawnOffset, bulletRotation);
+        Bullet shot = Instantiate(bullet, transform.position + playerVector.normalized * bulletSpawnOffset, bulletRotation).GetComponent<Bullet>();
+        shot.InitializeBullet(damage);
     }
 
     #endregion

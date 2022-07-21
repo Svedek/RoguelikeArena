@@ -7,7 +7,9 @@ public class PlayerController : Health {
     public static PlayerController Instance;
 
     #region Referances
-    Camera cam;
+    [Header("Referances")]
+    [SerializeField] private Transform weaponParent;
+    private Camera cam;
     protected override void Awake() {
         base.Awake();
 
@@ -86,8 +88,7 @@ public class PlayerController : Health {
     #endregion
 
     private void Start() {
-        // Give pistol
-        GiveWeapon(0);
+        GiveGun(WeaponManager.Instance.Pistol);
     }
 
     void Update() {
@@ -195,62 +196,28 @@ public class PlayerController : Health {
 
     #endregion
 
-    #region Attacks
-    [Header("Attack")]
-    [SerializeField] private BulletTrail bulletTrail;
-    struct WeaponStats {
-        public float fireRate; // delay in secs between shots
-        public float damage;
-        public float knockback;
-    }
-
-    WeaponStats weaponStats;
+    #region Attack and Weapon
+    // [Header("Attack")]
+    private Weapon weapon;
 
     private float lastAttack;
     private void Attack() {
-        if (input.attackPressed && lastAttack + (weaponStats.fireRate * stats[(int)StatID.attackSpeed]) <= Time.time) {
+        if (input.attackPressed && lastAttack + (weapon.attackSpeed * stats[(int)StatID.attackSpeed]) <= Time.time) {
+
             // Handle bullet
-            Fire();
+            weapon.Shoot();
             lastAttack = Time.time;
 
-            // Handle player knockback
+            // TODO Handle player knockback
         }
     }
 
-    private void Fire() {
-        int layerMask = LayerMask.GetMask("Enemy", "Terrain");
-        float maxRange = 20f;
-        Vector2 startPos = transform.position;
-        Vector2 fireDir = (input.mousePos - startPos).normalized;
-
-        RaycastHit2D hitInfo = Physics2D.Raycast(startPos, fireDir, maxRange, layerMask);
-
-        if (hitInfo) {
-            // Apply hit
-            Health target = hitInfo.transform.GetComponent<Health>();
-            if (target != null) {
-                target.TakeDamage(weaponStats.damage * stats[(int)StatID.damage], fireDir*weaponStats.knockback);
-            }
-
-            // Make trail
-            bulletTrail.MakeTrail(startPos, hitInfo.point);
-
-        } else {
-            // Make trail
-            bulletTrail.MakeTrail(startPos, startPos + fireDir * maxRange);
-        }
-
+    private readonly float gunPosOffset = 1f;
+    public void GiveGun(GameObject gun) {
+        GameObject gunObject = Instantiate(gun, weaponParent);
+        gunObject.transform.localPosition += Vector3.up * gunPosOffset;
+        weapon = gunObject.GetComponent<Weapon>();
     }
-
-    private void GiveWeapon(int id) { // TODO   GOING TO ENTIRELY RE-DO weapons, data will be held in external weapon clases and handled within
-                weaponStats.fireRate = 0.2f;
-                weaponStats.damage = 1f;
-                weaponStats.knockback = 10f;
-    }
-    private void DropWeapon() {
-        
-    }
-
     #endregion
 
     #region Initialization

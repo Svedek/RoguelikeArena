@@ -153,9 +153,8 @@ MonoBehaviour:
   preferedDistanceTolerance: 3
   preferedDistanceSlowDistance: 5
   sideMovementWeight: 0.5
-  damage: 1
-  knockback: 2
-  attackDelay: 1
+  attackDelay: 2
   attackRange: 15
   bullet: {fileID: 6759917460195387497, guid: e7fc52d56b435f1449c200458afb328a, type: 3}
+  damage: 1
   bulletSpawnOffset: 1
