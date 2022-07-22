@@ -64,8 +64,8 @@ public class PlayerController : Health {
         goldMod,
     }
 
-    public static void ApplyUpgrade(int id) {
-        stats[id] *= increaseAmmount[id];
+    public static void ApplyUpgrade(StatID id) {
+        stats[(int)id] *= increaseAmmount[(int)id];
     }
 
     #endregion
@@ -98,7 +98,7 @@ public class PlayerController : Health {
 
         CalculateActions(); // Input not used in movement/attack gets processessed here
 
-        Attack();
+        HandleWeapon(); // Attacks and otherwise handles weapon movement
 
         Move();
     }
@@ -185,7 +185,7 @@ public class PlayerController : Health {
         // TODO Move roll Into here
 
         if (input.upgradeSelected != -1 && upgradePoints > 0) {
-            ApplyUpgrade();
+            HandleUpgrade();
         }
 
         if (input.interactPressed) {
@@ -201,7 +201,11 @@ public class PlayerController : Health {
     private Weapon weapon;
 
     private float lastAttack;
-    private void Attack() {
+    private void HandleWeapon() {
+        // Make weapon follow cursor
+        weaponParent.rotation = Quaternion.LookRotation(Vector3.forward, (Vector3)input.mousePos - weaponParent.position);
+
+        // Handle shooting
         if (input.attackPressed && lastAttack + (weapon.attackSpeed * stats[(int)StatID.attackSpeed]) <= Time.time) {
 
             // Handle bullet
@@ -240,7 +244,7 @@ public class PlayerController : Health {
 
     private bool upgradesActive = false;
     private int upgradePoints = 0;
-    private int[] ids;
+    private StatID[] ids;
 
     public void GainExperience(float experience) {
         Debug.Log("cXp: " + currentExp + " XpG: " + experience + " RXp: " + requiredExp);
@@ -270,15 +274,15 @@ public class PlayerController : Health {
         requiredExp = Mathf.Pow(level, 1.7f) + (level * 3) + (7);
     }
     private void SetupLevelUpgrades() {
-        ids = new int[3];
+        ids = new StatID[3];
         Color[] colors = new Color[3];
         string[] text = new string[3];
         if (!upgradesActive) {
+            ids = RandID();
             for (int i = 0; i < 3; i++) {
-                float val = Random.Range(0f, 100f);
-                ids[i] = ValToID(val, i);
-                colors[i] = upgradeColors[ids[i]];
-                text[i] = upgradeText[ids[i]];
+                //ids[i] = RandID(i);
+                colors[i] = upgradeColors[(int)ids[i]];
+                text[i] = upgradeText[(int)ids[i]];
             }
 
 
@@ -288,12 +292,15 @@ public class PlayerController : Health {
         }
     }
 
-    private void ApplyUpgrade() {
+    private void HandleUpgrade() {
         var id = ids[input.upgradeSelected];
         ApplyUpgrade(id);
         upgradesActive = false;
 
-        print("upgradePoints: " + upgradePoints + "   id: " + id);
+        if(id == StatID.damage) {
+            weapon.damageMod = stats[(int)StatID.damage];
+        }
+
         if (--upgradePoints > 0) {
             SetupLevelUpgrades();
         } else {
@@ -325,37 +332,80 @@ public class PlayerController : Health {
         };
 
     // val defines the upgrade and id defines the pool val chooses from
-    private static int ValToID(float val, int id) {
+    private static StatID RandID(int id) {
+        int val = Random.Range(0, 100); // 0-99
         switch (id) {
             case 0: // 1st upgrade - damage oriented
                 switch (val) {
-                    case float a when (a <= 50f): // Damage +
-                        return 0;
-                    case float a when (a <= 100f): // Attack speed +
-                        return 1;
+                    case int a when (a < 50): // Damage +
+                        return StatID.damage;
+                    case int a when (a < 100): // Attack speed +
+                        return StatID.attackSpeed;
                 }
                 break;
             case 1: // 2nd upgrade - survivability oriented
                 switch (val) {
-                    case float a when (a <= 33.3f): // Move speed +
-                        return 2;
-                    case float a when (a <= 66.6f): // Defence +
-                        return 3;
-                    case float a when (a <= 100f): // Max health +
-                        return 4;
+                    case int a when (a < 33): // Move speed +
+                        return StatID.moveSpeed;
+                    case int a when (a < 66): // Defence +
+                        return StatID.defense;
+                    case int a when (a < 100): // Max health +
+                        return StatID.maxHealth;
                 }
                 break;
             case 2: // 3rd upgrade - util oriented
                 switch (val) {
-                    case float a when (a <= 50f): // Exp +
-                        return 5;
-                    case float a when (a <= 100f): // Gold +
-                        return 6;
+                    case int a when (a < 50): // Exp +
+                        return StatID.expMod;
+                    case int a when (a < 100): // Gold +
+                        return StatID.goldMod;
                 }
                 break;
         }
 
-        return -1;
+        Debug.LogError("Misuse of ValToId: " + id + "   " + val);
+        return (StatID)(-1);
+    }
+
+    private static StatID[] RandID() {
+        StatID[] ret = new StatID[3];
+
+        for (int i = 0; i < ret.Length; i++) {
+            int val = Random.Range(0, 100); // 0-99
+            switch (val) {
+                case int a when (a < 50): // Damage +
+                    ret[i] = StatID.damage;
+                    break;
+                case int a when (a < 100): // Attack speed +
+                    ret[i] = StatID.attackSpeed;
+                    break;
+                case int a when (a < 33): // Move speed +
+                    ret[i] = StatID.moveSpeed;
+                    break;
+                case int a when (a < 66): // Defence +
+                    ret[i] = StatID.defense;
+                    break;
+                case int a when (a < 100): // Max health +
+                    ret[i] = StatID.maxHealth;
+                    break;
+                case int a when (a < 50): // Exp +
+                    ret[i] = StatID.expMod;
+                    break;
+                case int a when (a < 100): // Gold +
+                    ret[i] = StatID.goldMod;
+                    break;
+            }
+
+            // If repeat, re-pick
+            for (int j = i-1; j >= 0; j--) {
+                if (ret[i] == ret[j]) {
+                    --i;
+                    break;
+                }
+            }
+        }
+
+        return ret;
     }
     #endregion
     #endregion

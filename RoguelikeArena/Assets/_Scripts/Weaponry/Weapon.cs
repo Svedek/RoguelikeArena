@@ -21,7 +21,7 @@ public class Weapon : MonoBehaviour {
     private readonly int layerMask = (1 << ((int)Layers.Enemy)) + (1 << ((int)Layers.Terrain));
     public virtual void Shoot() {
         Vector2 startPos = transform.position;
-        Vector2 fireDir = ((Vector2)transform.up - startPos).normalized;
+        Vector2 fireDir = transform.up.normalized;
         RaycastHit2D hitInfo;
 
 

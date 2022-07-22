@@ -407,11 +407,10 @@ MonoBehaviour:
   health: 5
   kbMod: 0
   weaponParent: {fileID: 6724823939217631110}
-  baseSpeed: 20
+  baseSpeed: 17.5
   rollSpeedMod: 1.5
   rollTime: 0.2
   rollDelay: 0.5
-  bulletTrail: {fileID: 3260975122303662163}
   interactionPrompt: {fileID: 4302130436474662754}
 --- !u!1 &3663067809150930917
 GameObject:
