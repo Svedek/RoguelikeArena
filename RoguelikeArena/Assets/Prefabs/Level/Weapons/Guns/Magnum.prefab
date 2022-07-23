@@ -100,5 +100,5 @@ MonoBehaviour:
   knockback: 1
   damage: 1.5
   spread: 5
-  pierce: 1
+  pierce: 2
   damageMod: 1

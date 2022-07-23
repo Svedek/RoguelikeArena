@@ -60,6 +60,7 @@
     <Compile Include="Assets\_Scripts\Map\Room.cs" />
     <Compile Include="Assets\_Scripts\Map\RoomStart.cs" />
     <Compile Include="Assets\_Scripts\Weaponry\Bullets\Bullet.cs" />
+    <Compile Include="Assets\_Scripts\Managers\WeaponManager.cs" />
     <Compile Include="Assets\_Scripts\Map\RoomShop.cs" />
     <Compile Include="Assets\_Scripts\Map\Interactable\Exit.cs" />
     <Compile Include="Assets\_Scripts\Map\Interactable\Interactable.cs" />
@@ -78,7 +79,6 @@
     <Compile Include="Assets\_Scripts\Map\Level.cs" />
     <Compile Include="Assets\_Scripts\Lifeforms\Enemies\RusherEnemy.cs" />
     <Compile Include="Assets\_Scripts\Util\Layers.cs" />
-    <Compile Include="Assets\_Scripts\Managers\WeaponManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

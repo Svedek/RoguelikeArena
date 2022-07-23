@@ -9,7 +9,7 @@ public class Weapon : MonoBehaviour {
     [field: SerializeField] public float attackSpeed { get; private set; }
     [SerializeField] private float range, knockback;
     [SerializeField] protected float damage, spread; // Spread is in degrees
-    [SerializeField] private bool pierce;
+    [SerializeField] private int pierce = 1;
 
     [HideInInspector] public float damageMod = 1f;
 
@@ -18,30 +18,38 @@ public class Weapon : MonoBehaviour {
         bulletTrail = GetComponentInChildren<BulletTrail>();
     }
 
-    private readonly int layerMask = (1 << ((int)Layers.Enemy)) + (1 << ((int)Layers.Terrain));
+    private const int layerMask = (1 << ((int)Layers.Enemy)) + (1 << ((int)Layers.Terrain));
     public virtual void Shoot() {
         Vector2 startPos = transform.position;
         Vector2 fireDir = transform.up.normalized;
-        RaycastHit2D hitInfo;
+        RaycastHit2D[] hitInfo = new RaycastHit2D[pierce];
 
+        ContactFilter2D cf = new ContactFilter2D();
+        cf = cf.NoFilter();
+        LayerMask lm = new LayerMask();
+        lm.value = layerMask;
+        cf.layerMask = lm;
 
-        if (pierce) {
-            hitInfo = Physics2D.Raycast(startPos, fireDir, range, layerMask);
-        } else {
-            hitInfo = Physics2D.Raycast(startPos, fireDir, range, layerMask);
-        }
-
-        // TODO ONLY WORKS FOR NON-PIERCE
-        if (hitInfo) {
+        int hits = Physics2D.Raycast(startPos, fireDir, cf, hitInfo, range);
+        
+        bool trailMade = false;
+        for (int i = 0; i < hits; i++) {
+            
             // Apply hit
-            Health target = hitInfo.transform.GetComponent<Health>();
+            Health target = hitInfo[i].transform.GetComponent<Health>();
             if (target != null) {
                 target.TakeDamage(damage * damageMod, fireDir * knockback);
             }
-            // Make trail
-            bulletTrail.MakeTrail(startPos, hitInfo.point);
+            
+            if (i == (pierce - 1) || hitInfo[i].transform.gameObject.layer == (int)Layers.Terrain) {
+                // Make trail
+                bulletTrail.MakeTrail(startPos, hitInfo[i].point);
+                trailMade = true;
+                break;
+            }
 
-        } else {
+        }
+        if (!trailMade) {
             // Make trail
             bulletTrail.MakeTrail(startPos, startPos + fireDir * range);
         }
@@ -52,7 +60,7 @@ public class Weapon : MonoBehaviour {
 
 
 
-void Update() {
+    void Update() {
         // Follow
     }
 }

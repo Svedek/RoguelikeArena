@@ -216,7 +216,7 @@ public class PlayerController : Health {
         }
     }
 
-    private readonly float gunPosOffset = 1f;
+    private const float gunPosOffset = 1f;
     public void GiveGun(GameObject gun) {
         GameObject gunObject = Instantiate(gun, weaponParent);
         gunObject.transform.localPosition += Vector3.up * gunPosOffset;
@@ -373,22 +373,22 @@ public class PlayerController : Health {
         for (int i = 0; i < ret.Length; i++) {
             int val = Random.Range(0, 100); // 0-99
             switch (val) {
-                case int a when (a < 50): // Damage +
+                case int a when (a < 20): // Damage +
                     ret[i] = StatID.damage;
                     break;
-                case int a when (a < 100): // Attack speed +
+                case int a when (a < 35): // Attack speed +
                     ret[i] = StatID.attackSpeed;
                     break;
-                case int a when (a < 33): // Move speed +
+                case int a when (a < 50): // Move speed +
                     ret[i] = StatID.moveSpeed;
                     break;
-                case int a when (a < 66): // Defence +
+                case int a when (a < 65): // Defence +
                     ret[i] = StatID.defense;
                     break;
-                case int a when (a < 100): // Max health +
+                case int a when (a < 80): // Max health +
                     ret[i] = StatID.maxHealth;
                     break;
-                case int a when (a < 50): // Exp +
+                case int a when (a < 90): // Exp +
                     ret[i] = StatID.expMod;
                     break;
                 case int a when (a < 100): // Gold +
