@@ -421,6 +421,7 @@ public class PlayerController : Health {
     public bool TryPurchace(int cost) {
         if (gold >= cost) {
             gold -= cost;
+            UIManager.Instance.UpdateGold(gold);
             return true;
         }
         return false;
@@ -456,6 +457,14 @@ public class PlayerController : Health {
     }
     private void DisableInteractionPrompt() {
         interactionPrompt.enabled = false;
+    }
+    #endregion
+
+    #region Shop Interaction
+    public void UsePotion(int potency) {
+        var hpGain = (potency / 100f) * stats[(int)StatID.maxHealth];
+        health = health + hpGain > stats[(int)StatID.maxHealth] ? stats[(int)StatID.maxHealth] : health + hpGain;
+        UIManager.Instance.UpdateHealth(health, stats[(int)StatID.maxHealth]);
     }
     #endregion
 }

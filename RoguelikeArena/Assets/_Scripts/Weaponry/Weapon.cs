@@ -19,18 +19,23 @@ public class Weapon : MonoBehaviour {
     }
 
     private const int layerMask = (1 << ((int)Layers.Enemy)) + (1 << ((int)Layers.Terrain));
+    private readonly ContactFilter2D contactFilter = GetContactFilter();
+    private static ContactFilter2D GetContactFilter(){
+        ContactFilter2D cf = new ContactFilter2D();
+        LayerMask lm = new LayerMask();
+        lm.value = layerMask;
+        cf.layerMask = lm;
+        return cf;
+    }
+
     public virtual void Shoot() {
         Vector2 startPos = transform.position;
         Vector2 fireDir = transform.up.normalized;
         RaycastHit2D[] hitInfo = new RaycastHit2D[pierce];
 
-        ContactFilter2D cf = new ContactFilter2D();
-        cf = cf.NoFilter();
-        LayerMask lm = new LayerMask();
-        lm.value = layerMask;
-        cf.layerMask = lm;
+        
 
-        int hits = Physics2D.Raycast(startPos, fireDir, cf, hitInfo, range);
+        int hits = Physics2D.Raycast(startPos, fireDir, contactFilter, hitInfo, range);
         
         bool trailMade = false;
         for (int i = 0; i < hits; i++) {

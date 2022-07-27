@@ -10,12 +10,19 @@ public class Interactable : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        print("perish");
+        Enter(collision);
+    }
+    private void OnTriggerExit2D(Collider2D collision) {
+        Exit(collision);
+    }
+
+    protected virtual void Enter(Collider2D collision) {
         if (collision.GetComponent<PlayerController>() != null) {
             PlayerController.Instance.InteractionEnter(this);
         }
     }
-    private void OnTriggerExit2D(Collider2D collision) {
+
+    protected virtual void Exit(Collider2D collision) {
         if (collision.GetComponent<PlayerController>() != null) {
             PlayerController.Instance.InteractionLeave(this);
         }

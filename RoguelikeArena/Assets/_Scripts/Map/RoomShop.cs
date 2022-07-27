@@ -5,7 +5,13 @@ using UnityEngine;
 
 public class RoomShop : Room {
 
-    #region clearing
+    private void Start() {
+
+    }
+
+    #region Setup Shop
+
+
 
     #endregion
 }
