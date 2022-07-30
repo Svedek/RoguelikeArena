@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour {
 
-    [SerializeField] GameObject shopStall, weaponUpgrade;
+    [SerializeField] GameObject shopStall;
 
-    void Awake() {
-        
-    }
+    private ShopStall[] itemStalls;
+    private ShopStall[] weaponStalls;
 
     private void Start() {
         // Spawn Things
         SpawnStalls();
-        //SpawnWeaponUpgrades();
+        SpawnWeaponUpgrades();
     }
 
     #region Spawning
+
     private const float yOffset = 7.5f;
     private void SpawnStalls() {
         int toSpawn = 4;
@@ -24,24 +24,31 @@ public class Shop : MonoBehaviour {
         var range = toSpawn * 3f;
         float seperation = range * 2f / toSpawn;
 
-        ShopStall[] stalls = new ShopStall[toSpawn];
+        itemStalls = new ShopStall[toSpawn];
         for (int i = 0; i < toSpawn; i++) {
             GameObject stallObject = Instantiate(shopStall, transform);
             stallObject.transform.localPosition = new Vector2(i * seperation - range + seperation/2, -yOffset);
 
-            stalls[i] = stallObject.GetComponent<ShopStall>();
+            itemStalls[i] = stallObject.GetComponent<ShopStall>();
         }
-        ItemManager.Instance.PopulateStalls(stalls);
+        ItemManager.Instance.PopulateItems(itemStalls);
     }
 
     private void SpawnWeaponUpgrades() {
-        int toSpawn = 2;
+        GameObject[] weaponsToSpawn = ItemManager.Instance.WeaponsToSpawn();
+        if (weaponsToSpawn == null) return;
+        int toSpawn = weaponsToSpawn.Length;
         if (toSpawn == 0) return;
         var range = toSpawn * 4f;
         float seperation = range * 2f / toSpawn;
+
+        weaponStalls = new ShopStall[toSpawn];
         for (int i = 0; i < toSpawn; i++) {
             GameObject stallObject = Instantiate(shopStall, transform);
             stallObject.transform.localPosition = new Vector2(i * seperation - range + seperation / 2, yOffset);
+
+            weaponStalls[i] = stallObject.GetComponent<ShopStall>();
+            weaponStalls[i].Initialize(weaponsToSpawn[i]);
         }
     }
     #endregion

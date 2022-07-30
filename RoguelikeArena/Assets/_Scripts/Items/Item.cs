@@ -13,7 +13,7 @@ public class Item : MonoBehaviour {
     public int Cost { get { return cost; } }
 
     public virtual void ApplyItem() {
-        Debug.LogError("ApplyItem in Item.cs must be overridden");
+        GetComponent<SpriteRenderer>().enabled = false;
     }
 }
 

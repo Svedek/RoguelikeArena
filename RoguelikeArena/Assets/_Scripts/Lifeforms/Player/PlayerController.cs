@@ -88,7 +88,7 @@ public class PlayerController : Health {
     #endregion
 
     private void Start() {
-        GiveGun(WeaponManager.Instance.Pistol);
+        ItemManager.Instance.GiveStartWeapon();
     }
 
     void Update() {
@@ -198,6 +198,11 @@ public class PlayerController : Health {
 
     #region Attack and Weapon
     // [Header("Attack")]
+    public float WeaponDamage {
+        get {
+            return weapon.Damage * stats[(int)StatID.damage];
+        }
+    }
     private Weapon weapon;
 
     private float lastAttack;
@@ -220,6 +225,9 @@ public class PlayerController : Health {
     public void GiveGun(GameObject gun) {
         GameObject gunObject = Instantiate(gun, weaponParent);
         gunObject.transform.localPosition += Vector3.up * gunPosOffset;
+        if (weapon != null) {
+            Destroy(weapon.gameObject);
+        }
         weapon = gunObject.GetComponent<Weapon>();
     }
     #endregion
@@ -296,10 +304,6 @@ public class PlayerController : Health {
         var id = ids[input.upgradeSelected];
         ApplyUpgrade(id);
         upgradesActive = false;
-
-        if(id == StatID.damage) {
-            weapon.damageMod = stats[(int)StatID.damage];
-        }
 
         if (--upgradePoints > 0) {
             SetupLevelUpgrades();

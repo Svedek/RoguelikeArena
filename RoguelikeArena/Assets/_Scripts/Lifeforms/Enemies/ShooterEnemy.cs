@@ -87,7 +87,7 @@ public class ShooterEnemy : Enemy {
         Vector3 playerVector = PlayerController.Instance.transform.position - transform.position;
         Quaternion bulletRotation = Quaternion.LookRotation(Vector3.forward, playerVector);
 
-        Bullet shot = Instantiate(bullet, transform.position + playerVector.normalized * bulletSpawnOffset, bulletRotation).GetComponent<Bullet>();
+        EnemyBullet shot = Instantiate(bullet, transform.position + playerVector.normalized * bulletSpawnOffset, bulletRotation).GetComponent<EnemyBullet>();
         shot.InitializeBullet(damage);
     }
 

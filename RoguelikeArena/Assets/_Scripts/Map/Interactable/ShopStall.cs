@@ -19,6 +19,17 @@ public class ShopStall : Interactable {
         desc.text = item.DescText;
         price.text = item.Cost + "";
     }
+    public void Initialize(GameObject itemPrefab, string title, string desc, int cost) {
+        // Spawn Item
+        GameObject itemObject = Instantiate(itemPrefab, transform);
+        itemObject.transform.position = transform.position;
+        item = itemObject.GetComponent<Item>();
+
+        // Setup Text
+        this.title.text = title;
+        this.desc.text = desc;
+        this.price.text = cost + "";
+    }
 
     public override void Interact() {
         if (PlayerController.Instance.TryPurchace(item.Cost)) {
@@ -28,6 +39,20 @@ public class ShopStall : Interactable {
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             PlayerController.Instance.InteractionLeave(this);
         }
+    }
+
+    public void ClearStall() {
+        // Destroy item
+        if (item != null) {
+            Destroy(item.gameObject);
+        }
+
+        // Disable Stall
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        PlayerController.Instance.InteractionLeave(this);
+        title.enabled = false;
+        desc.enabled = false;
+        price.enabled = false;
     }
 
     protected override void Enter(Collider2D collision) {

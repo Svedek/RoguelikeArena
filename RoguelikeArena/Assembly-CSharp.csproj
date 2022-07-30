@@ -61,17 +61,19 @@
     <Compile Include="Assets\_Scripts\Map\Interactable\WeaponUpgrade.cs" />
     <Compile Include="Assets\_Scripts\Map\RoomStart.cs" />
     <Compile Include="Assets\_Scripts\Weaponry\Bullets\Bullet.cs" />
-    <Compile Include="Assets\_Scripts\Managers\WeaponManager.cs" />
     <Compile Include="Assets\_Scripts\Map\RoomShop.cs" />
+    <Compile Include="Assets\_Scripts\Items\WeaponItem.cs" />
     <Compile Include="Assets\_Scripts\Managers\ItemManager.cs" />
     <Compile Include="Assets\_Scripts\Items\Relic.cs" />
     <Compile Include="Assets\_Scripts\Map\Interactable\Exit.cs" />
     <Compile Include="Assets\_Scripts\Map\Interactable\Interactable.cs" />
     <Compile Include="Assets\_Scripts\Map\RoomDoor.cs" />
     <Compile Include="Assets\_Scripts\Managers\EnemyManager.cs" />
+    <Compile Include="Assets\_Scripts\Map\Shop.cs" />
     <Compile Include="Assets\_Scripts\Lifeforms\Player\BulletTrail.cs" />
     <Compile Include="Assets\_Scripts\Lifeforms\Health.cs" />
     <Compile Include="Assets\_Scripts\Map\RoomExit.cs" />
+    <Compile Include="Assets\_Scripts\Weaponry\Bullets\EnemyBullet.cs" />
     <Compile Include="Assets\_Scripts\Map\RoomBase.cs" />
     <Compile Include="Assets\_Scripts\Managers\LevelManager.cs" />
     <Compile Include="Assets\_Scripts\Lifeforms\Enemies\Enemy.cs" />
@@ -85,7 +87,7 @@
     <Compile Include="Assets\_Scripts\Map\Level.cs" />
     <Compile Include="Assets\_Scripts\Lifeforms\Enemies\RusherEnemy.cs" />
     <Compile Include="Assets\_Scripts\Util\Layers.cs" />
-    <Compile Include="Assets\_Scripts\Map\Shop.cs" />
+    <Compile Include="Assets\_Scripts\Weaponry\ScatterProjectileWeapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -5,13 +5,14 @@ using UnityEngine;
 public class Weapon : MonoBehaviour {
 
     // Default weapon is raycast
+    public float Damage { get { return damage; } }
+
+    [SerializeField] protected Transform firepoint;
 
     [field: SerializeField] public float attackSpeed { get; private set; }
-    [SerializeField] private float range, knockback;
-    [SerializeField] protected float damage, spread; // Spread is in degrees
-    [SerializeField] private int pierce = 1;
-
-    [HideInInspector] public float damageMod = 1f;
+    [SerializeField] protected float range, knockback;
+    [SerializeField] protected float damage, spread; // Spread is in degrees    TODO ADD SPREAD to proj wep and this
+    [SerializeField] protected int pierce = 1;
 
     private BulletTrail bulletTrail;
     private void Awake() {
@@ -29,11 +30,11 @@ public class Weapon : MonoBehaviour {
     }
 
     public virtual void Shoot() {
-        Vector2 startPos = transform.position;
-        Vector2 fireDir = transform.up.normalized;
-        RaycastHit2D[] hitInfo = new RaycastHit2D[pierce];
+        Vector2 startPos = firepoint.position;
+        Quaternion bulletRotation = Quaternion.Euler(0, 0, firepoint.rotation.eulerAngles.z + Random.Range(-1f, 1f) * spread);
+        Vector2 fireDir = bulletRotation * Vector2.up;
 
-        
+        RaycastHit2D[] hitInfo = new RaycastHit2D[pierce];
 
         int hits = Physics2D.Raycast(startPos, fireDir, contactFilter, hitInfo, range);
         
@@ -43,7 +44,7 @@ public class Weapon : MonoBehaviour {
             // Apply hit
             Health target = hitInfo[i].transform.GetComponent<Health>();
             if (target != null) {
-                target.TakeDamage(damage * damageMod, fireDir * knockback);
+                target.TakeDamage(damage * PlayerController.stats[(int)PlayerController.StatID.damage], fireDir * knockback);
             }
             
             if (i == (pierce - 1) || hitInfo[i].transform.gameObject.layer == (int)Layers.Terrain) {
@@ -59,11 +60,6 @@ public class Weapon : MonoBehaviour {
             bulletTrail.MakeTrail(startPos, startPos + fireDir * range);
         }
     }
-
-
-
-
-
 
     void Update() {
         // Follow
