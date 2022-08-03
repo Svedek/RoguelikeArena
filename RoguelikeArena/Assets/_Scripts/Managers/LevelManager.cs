@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour {
 
+
+    public int Floor { get { return floor; } }
+
     #region Singleton Setup
     public static LevelManager Instance;
 
@@ -13,31 +16,25 @@ public class LevelManager : MonoBehaviour {
             Debug.LogError("Multiple instances of LevelManager!");
         }
         Instance = this;
-
-        // Temperary
-        CreateLevel();
     }
     #endregion
+
+    private void Start() {
+        // TODO, MAYBE MOVE??
+        CreateLevel();
+    }
 
     #region Level Management
     private Level level;
     [SerializeField] GameObject levelPrefab;
 
-    public int floor { get; private set; } = 0;
-    public float scaling {
-        get {
-            // get game time
-            var gameTime = 100f;
-
-            return (gameTime / 10) + (floor * 3);
-        }
-    }
+    private int floor = 0;
     public void CreateLevel() {
         ++floor;
 
         ClearLevel();
         level = Instantiate(levelPrefab).GetComponent<Level>();
-        level.Initialize(floor, scaling);
+        level.Initialize(GameManager.Instance.Scaling);
     }
 
     private void ClearLevel() {

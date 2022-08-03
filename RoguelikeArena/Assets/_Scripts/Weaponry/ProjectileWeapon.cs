@@ -5,7 +5,7 @@ using UnityEngine;
 public class ProjectileWeapon : Weapon {
 
     [SerializeField] GameObject bulletPrefab;
-    [SerializeField] float bulletVelocity;
+    [SerializeField] protected float bulletVelocity;
 
     void Awake() {
         

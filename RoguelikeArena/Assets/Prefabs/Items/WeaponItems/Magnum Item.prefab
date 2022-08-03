@@ -96,7 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleText: Magnum
-  descText: + Damage\n+ Pierce
+  descText: '+ Damage
+
+    + Pierce'
   cost: 30
   id: 2
   children: []

@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 607179514449339887}
   - component: {fileID: 607179514449339886}
-  - component: {fileID: 190719100487306138}
+  - component: {fileID: 6298474401126965387}
   m_Layer: 0
   m_Name: 22_Shotgun
   m_TagString: Untagged
@@ -104,7 +104,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
-  m_Color: {r: 0, g: 0.8591554, b: 1, a: 1}
+  m_Color: {r: 0.38417685, g: 0.3492346, b: 0.6792453, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -114,7 +114,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &190719100487306138
+--- !u!114 &6298474401126965387
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,15 +123,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 607179514449339872}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f909d4347530139479a8a02927c49053, type: 3}
+  m_Script: {fileID: 11500000, guid: c4aa2928e43f7304eb61911c09a1dd32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   firepoint: {fileID: 5439940507518504709}
-  <attackSpeed>k__BackingField: 0.5
-  range: 15
+  <attackSpeed>k__BackingField: 0.75
+  range: 8
   knockback: 1
-  damage: 1.5
-  spread: 4
-  pierce: 2
+  damage: 1
+  spread: 20
+  pierce: 1
   bulletPrefab: {fileID: 5522673564147213315, guid: e234980c964fe98418ddb5a2c8eef186, type: 3}
-  bulletVelocity: 30
+  bulletVelocity: 20
+  bullets: 5

@@ -10,12 +10,12 @@ public class Level : MonoBehaviour {
     private Position startPos; // ?
     private int roomCount; // ?
 
-    public void Initialize(int floor, float scaling) {
-        InitiateArena(floor, scaling);
+    public void Initialize(float scaling) {
+        InitiateArena(scaling);
     }
 
     private readonly float startVarriance = 0.6f; // Determines % away from center that start can spawn
-    private readonly int maxRooms = 16;
+    private readonly int maxRooms = 15;
 
     public class Position {
         public int x;
@@ -37,12 +37,13 @@ public class Level : MonoBehaviour {
     [SerializeField] private GameObject roomBase, roomShop, roomExit, roomStart;
     // depth - floor depth
     // scaling - difficulty scaling
-    private void InitiateArena(int depth, float scaling) {
+    private void InitiateArena(float scaling) {
         // Calculate bounds
-        var rooms = 5 + (int)(depth + Mathf.Sqrt(scaling));
+        var rooms = 5 + (int)(Mathf.Sqrt(scaling));
         roomCount = rooms >= maxRooms ? maxRooms : rooms;
 
         var bounds = 1 +  2 * (int) Mathf.Sqrt(roomCount);
+        UIManager.Instance.UpdateMinimap(bounds);
 
         // Find Start room
         int halfRoom = bounds / 2;

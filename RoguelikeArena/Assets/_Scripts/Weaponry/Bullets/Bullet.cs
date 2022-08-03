@@ -20,12 +20,19 @@ public class Bullet : MonoBehaviour {
     }
 
     private void Update() {
+        
         distanceTraveled += Vector2.Distance(lastPos, transform.position);
         lastPos = rb.position;
 
         if (distanceTraveled >= range) {
             DestroyBullet();
         }
+        /*
+        range -= Time.deltaTime * 10;
+        if (range <= 0) {
+            DestroyBullet();
+        }
+        */
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D collision) { // TODO Look over
@@ -34,7 +41,9 @@ public class Bullet : MonoBehaviour {
         switch (colLayer) {
             case (int)Layers.Enemy: // EnemyLayer
                 if (collision.GetComponent<Health>().TakeDamage(PlayerController.Instance.WeaponDamage, rb.velocity.normalized * knockback)) {
-                    DestroyBullet();
+                    if (--pierce <= 0) {
+                        DestroyBullet();
+                    }
                 }
                 break;
             case (int)Layers.Terrain: // TerrainLayer

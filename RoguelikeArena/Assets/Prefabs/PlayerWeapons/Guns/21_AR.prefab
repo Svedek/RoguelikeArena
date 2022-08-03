@@ -104,7 +104,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
-  m_Color: {r: 0, g: 0.8591554, b: 1, a: 1}
+  m_Color: {r: 0.64315224, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firepoint: {fileID: 6855138691595375242}
-  <attackSpeed>k__BackingField: 0.3
+  <attackSpeed>k__BackingField: 0.2
   range: 15
   knockback: 1
   damage: 1.5

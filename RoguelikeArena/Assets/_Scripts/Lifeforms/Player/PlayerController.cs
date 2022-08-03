@@ -82,6 +82,7 @@ public class PlayerController : Health {
         return true;
     }
     protected override void Die() {
+        base.Die();
         // TODO Perish
         print("Player Died");
     }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
 
-    public static UIManager Instance;
+    public static UIManager Instance { get; private set; }
 
 
 
@@ -105,10 +105,32 @@ public class UIManager : MonoBehaviour {
     #endregion
 
     #region Timers
+    [Header("Status Bars")]
+    [SerializeField] private Text globalTime;
+    [SerializeField] private Text gameTime;
 
+    public void SetTime(float global, float game) {
+        int minutes = (int)global / 60;
+        float seconds = global % 60;
+        
+        globalTime.text = minutes + ":" + seconds.ToString("n3");
+
+        minutes = (int)game / 60;
+        seconds = game % 60;
+        gameTime.text = minutes + ":" + seconds;
+    }
     #endregion
 
     #region Minimap
+    [Header("Upgrade Options")]
+    [SerializeField] Camera minimapCamera;
+    private const int roomSize = 60; 
+    public void UpdateMinimap(int roomBounds) {
+        int pos = (roomBounds / 2) * roomSize;
+        int size = (int) ((roomBounds / 2f) * roomSize);
 
+        minimapCamera.transform.position = new Vector3(pos, pos, -10f);
+        minimapCamera.orthographicSize = size;
+    }
     #endregion
 }

@@ -13,6 +13,8 @@ public class Health : MonoBehaviour {
     [Header("Health")]
     [SerializeField] protected float health;
     [SerializeField] protected float kbMod;
+    public bool Dead { get { return dead; } }
+    private bool dead = false;
 
     public virtual bool TakeDamage(float damage, Vector2 knockback) {
         if ((health -= damage) <= 0) Die();
@@ -20,6 +22,6 @@ public class Health : MonoBehaviour {
         return true;
     }
     protected virtual void Die() {
-        Debug.LogError("Die must be overwritten!");
+        dead = true;
     }
 }

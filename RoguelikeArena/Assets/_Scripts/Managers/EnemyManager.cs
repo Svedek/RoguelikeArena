@@ -29,20 +29,20 @@ public class EnemyManager : MonoBehaviour {
         }
     }
 
-    public void SpawnEnemies(float scaling, RoomBase room, Vector2 enterDir) {
+    public void SpawnEnemies(RoomBase room, Vector2 enterDir) {
         currentRoom = room;
         Vector2 roomCenter = room.transform.position;
 
-        float spawnVal = Random.Range(scaling * 0.75f, scaling*1.25f);
+        float spawnVal = GameManager.Instance.Scaling * Random.Range(0.8f, 1.2f);
 
         List<GameObject> toSpawn = new List<GameObject>();
 
-        while (spawnVal > 5f) {
-            float currentSpawnVal = Random.Range(spawnVal/4, spawnVal);
+        while (spawnVal > 2f) {
+            float currentSpawnVal = spawnVal * Random.Range(.25f, 1f);
             int spawnType = SpawnType(currentSpawnVal);
 
             var cost = enemyCostList[spawnType];
-            int count = (int) currentSpawnVal / cost;
+            int count = (int) (currentSpawnVal / cost);
             spawnVal -= count * cost;
             for (int i = 0; i < count; i++) {
                 toSpawn.Add(enemyPrefabs[spawnType]);
@@ -116,13 +116,13 @@ public class EnemyManager : MonoBehaviour {
     #endregion
 
     #region EnemyIDing and cost
-    private static readonly int[] enemyCostList = CostList();
-    private static int[] CostList() {
-        var costList = new int[System.Enum.GetValues(typeof(EnemyID)).Length];
+    private static readonly float[] enemyCostList = CostList();
+    private static float[] CostList() {
+        var costList = new float[System.Enum.GetValues(typeof(EnemyID)).Length];
 
-        costList[(int)EnemyID.Swarmer] = 1;
-        costList[(int)EnemyID.Runner] = 2;
-        costList[(int)EnemyID.Shooter] = 5;
+        costList[(int)EnemyID.Swarmer] = 0.5f;
+        costList[(int)EnemyID.Runner] = 1f;
+        costList[(int)EnemyID.Shooter] = 3f;
 
         return costList;
     }

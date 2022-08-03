@@ -104,7 +104,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
-  m_Color: {r: 0, g: 0.8591554, b: 1, a: 1}
+  m_Color: {r: 0.98064375, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -127,11 +127,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firepoint: {fileID: 985070670470164315}
-  <attackSpeed>k__BackingField: 0.2
+  <attackSpeed>k__BackingField: 0.1
   range: 15
   knockback: 1
   damage: 1.5
-  spread: 4
+  spread: 6
   pierce: 2
   bulletPrefab: {fileID: 5522673564147213315, guid: e234980c964fe98418ddb5a2c8eef186, type: 3}
-  bulletVelocity: 30
+  bulletVelocity: 24

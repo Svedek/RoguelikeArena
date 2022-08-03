@@ -13,6 +13,7 @@ public class Enemy : Health {
     }
 
     protected override void Die() {
+        base.Die();
         EnemyManager.Instance.EnemyDied(this);
         PlayerController.Instance.GainExperience(baseExp);
         PlayerController.Instance.GainGold(baseGold);

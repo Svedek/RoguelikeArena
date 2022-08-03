@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firepoint: {fileID: 3654116853963784248}
-  <attackSpeed>k__BackingField: 0.3
+  <attackSpeed>k__BackingField: 0.2
   range: 10
   knockback: 1
   damage: 1

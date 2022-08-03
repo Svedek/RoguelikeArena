@@ -82,12 +82,12 @@
     <Compile Include="Assets\_Scripts\Weaponry\Weapon.cs" />
     <Compile Include="Assets\_Scripts\Items\Potion.cs" />
     <Compile Include="Assets\_Scripts\Weaponry\RailgunWeapon.cs" />
-    <Compile Include="Assets\_Scripts\Managers\GameplayManager.cs" />
     <Compile Include="Assets\_Scripts\Map\Interactable\ShopStall.cs" />
     <Compile Include="Assets\_Scripts\Map\Level.cs" />
     <Compile Include="Assets\_Scripts\Lifeforms\Enemies\RusherEnemy.cs" />
     <Compile Include="Assets\_Scripts\Util\Layers.cs" />
     <Compile Include="Assets\_Scripts\Weaponry\ScatterProjectileWeapon.cs" />
+    <Compile Include="Assets\_Scripts\Managers\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
