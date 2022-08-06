@@ -98,13 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firepoint: {fileID: 3654116853963784248}
   <attackSpeed>k__BackingField: 0.2
-  range: 10
-  knockback: 1
-  damage: 1
   spread: 8
-  pierce: 1
-  bulletPrefab: {fileID: 5522673564147213315, guid: e234980c964fe98418ddb5a2c8eef186, type: 3}
-  bulletVelocity: 20
+  bulletPrefab: {fileID: 236075389881461822, guid: eaddfd896b669b14285f937e50b02ba8, type: 3}
 --- !u!1 &7740695004375946441
 GameObject:
   m_ObjectHideFlags: 0

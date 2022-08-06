@@ -83,8 +83,20 @@ public class PlayerController : Health {
     }
     protected override void Die() {
         base.Die();
-        // TODO Perish
-        print("Player Died");
+
+        // Perish
+        SpriteRenderer[] renderers = GetComponentsInChildren<SpriteRenderer>();
+        foreach(SpriteRenderer renderer in renderers) {
+            renderer.enabled = false;
+        }
+        GetComponent<Collider2D>().enabled = false;
+
+        // Animation
+
+        // Set Game State
+
+
+        this.enabled = false;
     }
     #endregion
 
@@ -199,9 +211,9 @@ public class PlayerController : Health {
 
     #region Attack and Weapon
     // [Header("Attack")]
-    public float WeaponDamage {
+    public float DamageMod {
         get {
-            return weapon.Damage * stats[(int)StatID.damage];
+            return stats[(int)StatID.damage];
         }
     }
     private Weapon weapon;

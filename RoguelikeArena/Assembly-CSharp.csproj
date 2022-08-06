@@ -65,6 +65,8 @@
     <Compile Include="Assets\_Scripts\Items\WeaponItem.cs" />
     <Compile Include="Assets\_Scripts\Managers\ItemManager.cs" />
     <Compile Include="Assets\_Scripts\Items\Relic.cs" />
+    <Compile Include="Assets\MiscManager.cs" />
+    <Compile Include="Assets\_Scripts\Weaponry\Weapon.cs" />
     <Compile Include="Assets\_Scripts\Map\Interactable\Exit.cs" />
     <Compile Include="Assets\_Scripts\Map\Interactable\Interactable.cs" />
     <Compile Include="Assets\_Scripts\Map\RoomDoor.cs" />
@@ -79,15 +81,15 @@
     <Compile Include="Assets\_Scripts\Lifeforms\Enemies\Enemy.cs" />
     <Compile Include="Assets\_Scripts\Items\Item.cs" />
     <Compile Include="Assets\_Scripts\Weaponry\ProjectileWeapon.cs" />
-    <Compile Include="Assets\_Scripts\Weaponry\Weapon.cs" />
+    <Compile Include="Assets\_Scripts\Weaponry\RaycastWeapon.cs" />
     <Compile Include="Assets\_Scripts\Items\Potion.cs" />
     <Compile Include="Assets\_Scripts\Weaponry\RailgunWeapon.cs" />
     <Compile Include="Assets\_Scripts\Map\Interactable\ShopStall.cs" />
+    <Compile Include="Assets\_Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\_Scripts\Map\Level.cs" />
     <Compile Include="Assets\_Scripts\Lifeforms\Enemies\RusherEnemy.cs" />
     <Compile Include="Assets\_Scripts\Util\Layers.cs" />
     <Compile Include="Assets\_Scripts\Weaponry\ScatterProjectileWeapon.cs" />
-    <Compile Include="Assets\_Scripts\Managers\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -4,16 +4,8 @@ using UnityEngine;
 
 public class EnemyBullet : Bullet {
 
-    [SerializeField] float damage;
+    [SerializeField][Range(0, 1f)] float playerPrediction;
     const int ignoreLayer = (int)Layers.Enemy;
-
-    protected override void Start() {
-        lastPos = transform.position;
-        GetComponent<Rigidbody2D>().velocity = transform.up * velocity;
-
-        GetComponent<SpriteRenderer>().enabled = true;
-        GetComponent<Collider2D>().enabled = true;
-    }
     
     protected override void OnTriggerEnter2D(Collider2D collision) { // TODO Look over
         var colLayer = collision.gameObject.layer;
@@ -31,8 +23,9 @@ public class EnemyBullet : Bullet {
                 break;
         }
     }
-    public void InitializeBullet(float damage) {
-        // idkfking know
-        this.damage = damage;
+
+    protected override void SetVelocity(float velocity) {
+        rb.velocity = ((Vector2)transform.up * velocity) + PlayerController.Instance.GetComponent<Rigidbody2D>().velocity * playerPrediction;
     }
+
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour {
 
-    public static ItemManager Instance;
+    public static ItemManager Instance { get; private set; }
 
     //TESTING 
     private void Update() {

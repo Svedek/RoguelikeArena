@@ -128,10 +128,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firepoint: {fileID: 985070670470164315}
   <attackSpeed>k__BackingField: 0.1
-  range: 15
-  knockback: 1
-  damage: 1.5
   spread: 6
-  pierce: 2
-  bulletPrefab: {fileID: 5522673564147213315, guid: e234980c964fe98418ddb5a2c8eef186, type: 3}
-  bulletVelocity: 24
+  bulletPrefab: {fileID: 6816473418922746073, guid: 73e30c2d072b6b04d8b626eba1b4d2c4, type: 3}

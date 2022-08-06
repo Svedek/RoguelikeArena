@@ -134,7 +134,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4840f034f420a540b2a8d562a910845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockback: 1
-  velocity: 15
-  range: 25
   damage: 1
+  playerPrediction: 0.2

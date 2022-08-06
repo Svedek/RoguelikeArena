@@ -68,8 +68,8 @@ public class ShooterEnemy : Enemy {
     [SerializeField] private float attackDelay;
     [SerializeField] private float attackRange;
 
+    [Header("Bullet")]
     [SerializeField] private GameObject bullet;
-    [SerializeField] private float damage;
     [SerializeField] private float bulletSpawnOffset;
     private float nextAttack;
     
@@ -87,8 +87,8 @@ public class ShooterEnemy : Enemy {
         Vector3 playerVector = PlayerController.Instance.transform.position - transform.position;
         Quaternion bulletRotation = Quaternion.LookRotation(Vector3.forward, playerVector);
 
-        EnemyBullet shot = Instantiate(bullet, transform.position + playerVector.normalized * bulletSpawnOffset, bulletRotation).GetComponent<EnemyBullet>();
-        shot.InitializeBullet(damage);
+        Instantiate(bullet, transform.position + playerVector.normalized * bulletSpawnOffset, bulletRotation, MiscManager.Instance.BulletParent);
+        //EnemyBullet shot = Instantiate(bullet, transform.position + playerVector.normalized * bulletSpawnOffset, bulletRotation, MiscManager.Instance.BulletParent).GetComponent<EnemyBullet>();
     }
 
     #endregion

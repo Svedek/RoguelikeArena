@@ -35,6 +35,8 @@ public class LevelManager : MonoBehaviour {
         ClearLevel();
         level = Instantiate(levelPrefab).GetComponent<Level>();
         level.Initialize(GameManager.Instance.Scaling);
+
+        UIManager.Instance.SetFloor(floor);
     }
 
     private void ClearLevel() {

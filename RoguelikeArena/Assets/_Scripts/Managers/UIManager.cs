@@ -104,20 +104,20 @@ public class UIManager : MonoBehaviour {
     }
     #endregion
 
-    #region Timers
+    #region Progress Texts
     [Header("Status Bars")]
     [SerializeField] private Text globalTime;
-    [SerializeField] private Text gameTime;
+    [SerializeField] private Text floorText;
 
-    public void SetTime(float global, float game) {
+    public void SetTime(float global) {
         int minutes = (int)global / 60;
         float seconds = global % 60;
         
         globalTime.text = minutes + ":" + seconds.ToString("n3");
+    }
 
-        minutes = (int)game / 60;
-        seconds = game % 60;
-        gameTime.text = minutes + ":" + seconds;
+    public void SetFloor(int floor) {
+        floorText.text = "Floor: " + floor;
     }
     #endregion
 

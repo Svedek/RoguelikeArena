@@ -97,7 +97,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleText: Grenade Launcher
-  descText: +Explosive bullets
+  descText: '+Explosive bullets
+
+
+    (not finished, dont buy)'
   cost: 0
   id: 7
   children: []
