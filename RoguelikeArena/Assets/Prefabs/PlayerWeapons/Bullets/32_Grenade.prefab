@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4151567223552553647}
   - component: {fileID: 3935513985219801598}
   - component: {fileID: 4151567223552553646}
-  - component: {fileID: 4151567223552553649}
+  - component: {fileID: 5129541064138941821}
   m_Layer: 12
   m_Name: 32_Grenade
   m_TagString: Untagged
@@ -98,13 +98,13 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &4151567223552553646
 CircleCollider2D:
@@ -122,7 +122,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &4151567223552553649
+--- !u!114 &5129541064138941821
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,11 +131,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4151567223552553648}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea301dffcf5ac03499d1b41654225323, type: 3}
+  m_Script: {fileID: 11500000, guid: 7727cec563c1a914bb74b266bd73a9c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  range: 10
+  damage: 0
+  range: 30
   knockback: 1
-  velocity: 10
+  velocity: 30
   pierce: 1
+  bouncy: 1
+  explosion: {fileID: 7882841405082131693, guid: 2c6a192a851fac84abc77bc5245e78db, type: 3}

@@ -7,13 +7,13 @@ public class RaycastWeapon : Weapon {
     [SerializeField] protected float range, knockback, damage;
     [SerializeField] protected int pierce = 1;
 
-    private BulletTrail bulletTrail;
+    protected BulletTrail bulletTrail;
     private void Awake() {
         bulletTrail = GetComponentInChildren<BulletTrail>();
     }
 
     private const int layerMask = (1 << ((int)Layers.Enemy)) + (1 << ((int)Layers.Terrain));
-    private readonly ContactFilter2D contactFilter = GetContactFilter();
+    protected readonly ContactFilter2D contactFilter = GetContactFilter();
     private static ContactFilter2D GetContactFilter(){
         ContactFilter2D cf = new ContactFilter2D();
         LayerMask lm = new LayerMask();

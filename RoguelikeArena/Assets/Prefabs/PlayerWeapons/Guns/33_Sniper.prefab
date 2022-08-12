@@ -240,11 +240,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firepoint: {fileID: 3850256180034999723}
-  <attackSpeed>k__BackingField: 0.5
+  <attackSpeed>k__BackingField: 0.75
+  spread: 2
   range: 32
   knockback: 1
   damage: 5
-  spread: 2
   pierce: 8
 --- !u!1 &8823364141918922746
 GameObject:

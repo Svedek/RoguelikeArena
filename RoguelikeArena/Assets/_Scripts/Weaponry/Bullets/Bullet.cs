@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour {
 
     protected Rigidbody2D rb;
 
-    private void Awake() {
+    protected virtual void Awake() {
         rb = GetComponent<Rigidbody2D>();
         SetVelocity(velocity);
 

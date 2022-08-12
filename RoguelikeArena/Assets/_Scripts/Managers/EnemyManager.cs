@@ -33,13 +33,36 @@ public class EnemyManager : MonoBehaviour {
         currentRoom = room;
         Vector2 roomCenter = room.transform.position;
 
-        float spawnVal = GameManager.Instance.Scaling * Random.Range(0.8f, 1.2f);
+        float spawnVal = GameManager.Instance.Scaling;
 
         List<GameObject> toSpawn = new List<GameObject>();
 
-        while (spawnVal > 2f) {
-            float currentSpawnVal = spawnVal * Random.Range(.25f, 1f);
-            int spawnType = SpawnType(currentSpawnVal);
+        int spawnGen;
+        switch (spawnVal) {
+            case float a when(a < 20f): // Tier 1
+                spawnGen = 0;
+                break;
+            case float a when (a < 25f): // Tier 1 and 2
+                spawnGen = 1;
+                break;
+            case float a when (a < 50f): // Tier 2
+                spawnGen = 2;
+                break;
+            case float a when (a < 55f): // Tier 2 and 3
+                spawnGen = 3;
+                break;
+            default: // Tier 3
+                spawnGen = 4;
+                break;
+        }
+        
+        while (spawnVal > (1+(spawnGen/2))*2) {
+            float currentSpawnVal = spawnVal * Random.Range(.4f, 1f);
+            int spawnType = SpawnType(spawnGen, currentSpawnVal);
+            if (spawnType == -1) {
+                Debug.LogWarning("While calculation is wrong if this goes off");
+                break;
+            }
 
             var cost = enemyCostList[spawnType];
             int count = (int) (currentSpawnVal / cost);
@@ -64,16 +87,24 @@ public class EnemyManager : MonoBehaviour {
         }
     }
 
+    private readonly EnemyID[][] enemySpawnGen = new EnemyID[][] {
+        new EnemyID[]{EnemyID.Swarmer1, EnemyID.Runner1, EnemyID.Shooter1},
+        new EnemyID[]{EnemyID.Swarmer1, EnemyID.Runner1, EnemyID.Shooter1, EnemyID.Swarmer2, EnemyID.Runner2, EnemyID.Shooter2},
+        new EnemyID[]{EnemyID.Swarmer2, EnemyID.Runner2, EnemyID.Shooter2},
+        new EnemyID[]{EnemyID.Swarmer2, EnemyID.Runner2, EnemyID.Shooter2, EnemyID.Runner3, EnemyID.Shooter3, EnemyID.Sniper},
+        new EnemyID[]{EnemyID.Runner3, EnemyID.Shooter3, EnemyID.Sniper},
+    };
 
-    private int SpawnType(float spawnVal) {
-        switch(spawnVal) {
-            case float a when (a < enemyCostList[1]):
-                return 0;
-            case float a when (a < enemyCostList[2]):
-                return Random.Range(0,2);
+    private int SpawnType(int spawnGen, float spawnVal) {
+        EnemyID[] spawnList = enemySpawnGen[spawnGen];
+
+        int i;
+        for (i = 0; i < spawnList.Length; i++) {
+            if (spawnVal < enemyCostList[(int)spawnList[i]]) break;
         }
 
-        return Random.Range(0, enemyCostList.Length); ;
+        if (i == 0) return -1;
+        else return (int)spawnList[Random.Range(0,i)];
      }
 
 
@@ -120,16 +151,31 @@ public class EnemyManager : MonoBehaviour {
     private static float[] CostList() {
         var costList = new float[System.Enum.GetValues(typeof(EnemyID)).Length];
 
-        costList[(int)EnemyID.Swarmer] = 0.5f;
-        costList[(int)EnemyID.Runner] = 1f;
-        costList[(int)EnemyID.Shooter] = 3f;
+        // 0 - 25
+        costList[(int)EnemyID.Swarmer1] = 0.5f;
+        costList[(int)EnemyID.Runner1] = 1f;
+        costList[(int)EnemyID.Shooter1] = 3f;
+        // 20 - 55
+        costList[(int)EnemyID.Swarmer2] = 1f;
+        costList[(int)EnemyID.Runner2] = 2f;
+        costList[(int)EnemyID.Shooter2] = 5f;
+        // 50+
+        costList[(int)EnemyID.Runner3] = 3f;
+        costList[(int)EnemyID.Shooter3] = 7f;
+        costList[(int)EnemyID.Sniper] = 10f;
 
         return costList;
     }
     private enum EnemyID {
-        Swarmer,
-        Runner,
-        Shooter
+        Swarmer1,
+        Runner1,
+        Shooter1,
+        Swarmer2,
+        Runner2,
+        Shooter2,
+        Runner3,
+        Shooter3,
+        Sniper,
     }
     #endregion
 }

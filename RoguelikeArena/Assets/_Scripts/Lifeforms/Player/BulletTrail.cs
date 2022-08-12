@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletTrail : MonoBehaviour {
 
     private LineRenderer lr;
+    [SerializeField] float lineDurration = 0.02f;
 
     private void Awake() {
         lr = GetComponent<LineRenderer>();
@@ -17,7 +18,7 @@ public class BulletTrail : MonoBehaviour {
     }
 
     private IEnumerator DisableVisibility() {
-        yield return new WaitForSeconds(0.02f);
+        yield return new WaitForSeconds(lineDurration);
         lr.enabled = false;
     }
 }

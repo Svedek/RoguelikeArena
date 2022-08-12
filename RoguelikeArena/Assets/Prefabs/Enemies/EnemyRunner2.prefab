@@ -144,10 +144,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16e85fef36e7d94bb2c153a5c631494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  kbMod: 0
-  baseGold: 3
-  baseExp: 2
-  moveSpeed: 70
-  damage: 1
+  health: 7
+  kbMod: 3
+  baseGold: 9
+  baseExp: 6
+  moveSpeed: 75
+  damage: 1.2
   knockback: 5

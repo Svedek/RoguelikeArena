@@ -28,6 +28,7 @@ public class Health : MonoBehaviour {
     private bool dead = false;
 
     public virtual bool TakeDamage(float damage, Vector2 knockback) {
+        if (dead) return false;
         if ((health -= damage) <= 0) Die();
         rb.AddForce(knockback * kbMod, ForceMode2D.Impulse);
         return true;

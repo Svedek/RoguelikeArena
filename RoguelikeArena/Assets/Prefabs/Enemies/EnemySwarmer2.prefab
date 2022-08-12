@@ -149,5 +149,5 @@ MonoBehaviour:
   baseGold: 3
   baseExp: 4.5
   moveSpeed: 110
-  damage: 1
+  damage: 0.6
   knockback: 3

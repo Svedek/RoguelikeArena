@@ -7,22 +7,6 @@ public class ItemManager : MonoBehaviour {
 
     public static ItemManager Instance { get; private set; }
 
-    //TESTING 
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) GivePlayerWeapon(WeaponID.pistol);
-        if (Input.GetKeyDown(KeyCode.Alpha2)) GivePlayerWeapon(WeaponID.smg);
-        if (Input.GetKeyDown(KeyCode.Alpha3)) GivePlayerWeapon(WeaponID.magnum);
-        if (Input.GetKeyDown(KeyCode.Alpha4)) GivePlayerWeapon(WeaponID.ar);
-        if (Input.GetKeyDown(KeyCode.Alpha5)) GivePlayerWeapon(WeaponID.shotgun);
-        if (Input.GetKeyDown(KeyCode.Alpha6)) GivePlayerWeapon(WeaponID.laserPistol);
-        if (Input.GetKeyDown(KeyCode.Alpha7)) GivePlayerWeapon(WeaponID.gatling);
-        if (Input.GetKeyDown(KeyCode.Alpha8)) GivePlayerWeapon(WeaponID.grenadeLauncher);
-        if (Input.GetKeyDown(KeyCode.Alpha9)) GivePlayerWeapon(WeaponID.sniper);
-        if (Input.GetKeyDown(KeyCode.Alpha0)) GivePlayerWeapon(WeaponID.laserGatling);
-    }
-
-
-
     void Awake() {
         // Singleton Setup
         if (Instance != null) {

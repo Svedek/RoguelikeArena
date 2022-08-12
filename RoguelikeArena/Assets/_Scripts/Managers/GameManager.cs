@@ -60,11 +60,13 @@ public class GameManager : MonoBehaviour {
     #endregion
 
     #region Time / Scaling
+    private float scalingBase = 5f;
     public float Scaling {
         get {
-            return 5 + time * .05f + LevelManager.Instance.Floor * 2f;
+            return scalingBase + time * .05f + LevelManager.Instance.Floor * 2f;
         }
     }
+    public void IncreaseScaling(float inc) => scalingBase += inc;
 
     private float time = 0f;
 

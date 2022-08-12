@@ -5,7 +5,6 @@ using UnityEngine;
 public class WeaponItem : Item {
 
     [SerializeField] ItemManager.WeaponID id;
-    [SerializeField] GameObject[] children;
 
     public override void ApplyItem() {
         base.ApplyItem();

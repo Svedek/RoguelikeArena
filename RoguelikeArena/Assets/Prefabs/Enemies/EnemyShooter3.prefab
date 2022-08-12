@@ -145,18 +145,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  kbMod: 0
+  kbMod: 4
   baseGold: 7
   baseExp: 5
   moveSpeed: 70
-  preferedDistance: 8
-  preferedDistanceTolerance: 3
-  preferedDistanceSlowDistance: 5
-  sideMovementWeight: 0.5
-  attackDelay: 2
-  attackRange: 15
-  bullet: {fileID: 6759917460195387497, guid: e7fc52d56b435f1449c200458afb328a, type: 3}
-  damage: 1
-  bulletVelocity: 15
-  range: 20
+  preferedDistance: 11
+  preferedDistanceTolerance: 5
+  preferedDistanceSlowDistance: 7
+  sideMovementWeight: 0.7
+  attackDelay: 1.4
+  attackRange: 25
+  bullet: {fileID: 7094959344798525602, guid: 1c156e205123b23478b53dbc2b4f252d, type: 3}
   bulletSpawnOffset: 1

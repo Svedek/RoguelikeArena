@@ -21,6 +21,7 @@ public class PlayerController : Health {
 
         // Get refferances
         cam = GetComponentInChildren<Camera>();
+        dashTrail = GetComponent<TrailRenderer>();
 
         // Initialize Experience
         Initialize();
@@ -72,6 +73,8 @@ public class PlayerController : Health {
 
     #region Health
     public override bool TakeDamage(float damage, Vector2 kbDir) {
+        if (rolling) return false;
+
         if ((health -= damage) <= 0) Die();
         // TODO TAKE KNOCKBACK
 
@@ -149,6 +152,7 @@ public class PlayerController : Health {
 
     #region movement 
     [Header("Movement")]
+    private TrailRenderer dashTrail;
     [SerializeField] private float baseSpeed;
     [SerializeField] private float rollSpeedMod = 1.25f, rollTime = .2f, rollDelay = .5f;
     private bool rolling = false, rollAvailable = true;
@@ -180,13 +184,14 @@ public class PlayerController : Health {
     private void Roll() { // TODO invincibility durring roll + VFX for rolling
         rolling = true;
         rollAvailable = false;
+        dashTrail.emitting = true;
         StartCoroutine(EndRoll());
     }
 
     private IEnumerator EndRoll() {
-        print("poggy!");
         yield return new WaitForSeconds(rollTime);
         rolling = false;
+        dashTrail.emitting = false;
         yield return new WaitForSeconds(rollDelay - rollTime);
         rollAvailable = true;
     }

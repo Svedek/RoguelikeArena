@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  kbMod: 0
+  kbMod: 6
   baseGold: 7
   baseExp: 5
   moveSpeed: 55
@@ -156,8 +156,4 @@ MonoBehaviour:
   attackDelay: 2
   attackRange: 15
   bullet: {fileID: 6759917460195387497, guid: e7fc52d56b435f1449c200458afb328a, type: 3}
-  damage: 1
-  bulletVelocity: 15
-  range: 20
-  pierce: 1
   bulletSpawnOffset: 1
