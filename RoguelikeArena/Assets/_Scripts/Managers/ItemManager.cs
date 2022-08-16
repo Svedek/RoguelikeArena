@@ -47,14 +47,14 @@ public class ItemManager : MonoBehaviour {
             // Tier 0
             case WeaponID.pistol:
                 return new WeaponID[] {
-                    WeaponID.smg,
+                    WeaponID.dualPistols,
                     WeaponID.magnum
                 };
 
             // Tier 1
-            case WeaponID.smg:
+            case WeaponID.dualPistols:
                 return new WeaponID[] {
-                    WeaponID.ar,
+                    WeaponID.smg,
                     WeaponID.shotgun
                 };
             case WeaponID.magnum:
@@ -64,9 +64,9 @@ public class ItemManager : MonoBehaviour {
                 };
 
             // Tier 2
-            case WeaponID.ar:
+            case WeaponID.smg:
                 return new WeaponID[] {
-                    WeaponID.gatling
+                    WeaponID.ar
                 };
             case WeaponID.shotgun:
                 return new WeaponID[] {
@@ -78,9 +78,9 @@ public class ItemManager : MonoBehaviour {
                 };
 
             // Tier 3
-            case WeaponID.gatling:
+            case WeaponID.ar:
                 return new WeaponID[] {
-                    WeaponID.laserGatling
+                    WeaponID.minigun
                 };
             case WeaponID.grenadeLauncher:
                 return new WeaponID[] {
@@ -88,13 +88,36 @@ public class ItemManager : MonoBehaviour {
                 };
             case WeaponID.sniper:
                 return new WeaponID[] {
-                    WeaponID.railgun
+                    WeaponID.laserRifle
                 };
 
             // Tier 4
-            case WeaponID.laserGatling:
+            case WeaponID.minigun:
+                return new WeaponID[] {
+                    WeaponID.laserMinigun,
+                    WeaponID.superMinigun
+                };
             case WeaponID.rocketLauncher:
+                return new WeaponID[] {
+                    WeaponID.clusterLauncher
+
+                };
+            case WeaponID.laserRifle:
+                return new WeaponID[] {
+                    WeaponID.railgun
+                };
+
+            // Tier 5
+            case WeaponID.laserMinigun:
+            case WeaponID.superMinigun:
+            case WeaponID.clusterLauncher:
             case WeaponID.railgun:
+                return new WeaponID[] {
+                    WeaponID.worldEnder
+                };
+
+            // Tier 6
+            case WeaponID.worldEnder:
                 return null;
         }
 
@@ -196,22 +219,29 @@ public class ItemManager : MonoBehaviour {
     }
     */
     public enum WeaponID {
-        pistol, // -> smg, magnum
+        pistol, // -> dualPistols, magnum
 
-        smg, // -> ar, shotgun
+        dualPistols, // -> smg, shotgun
         magnum, // -> shotgun, laserPistol
 
-        ar, // -> gatling
+        smg, // -> ar
         shotgun, // -> grenade
-        laserPistol, // -> rocket
+        laserPistol, // -> sniper
 
-        gatling, // -> laserGatling
+        ar, // -> minigun
         grenadeLauncher, // -> rocketLauncher
-        sniper, // -> railgun
+        sniper, // -> laserRifle
 
-        laserGatling,
-        rocketLauncher,
-        railgun,
+        minigun, // -> laserMinigun, superMinigun
+        rocketLauncher, // -> clusterLauncher
+        laserRifle, // -> railgun
+
+        laserMinigun, // Lights Out
+        superMinigun, // Brass Helix / HellFire
+        clusterLauncher, // Ash
+        railgun, // Decimator
+
+        worldEnder
     }
     #endregion
 

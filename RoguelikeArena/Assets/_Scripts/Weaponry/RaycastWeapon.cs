@@ -36,7 +36,7 @@ public class RaycastWeapon : Weapon {
             
             // Apply hit
             Health target = hitInfo[i].transform.GetComponent<Health>();
-            if (target != null) {
+            if (target != null && target.gameObject.layer != (int)Layers.Player) {
                 target.TakeDamage(damage * PlayerController.stats[(int)PlayerController.StatID.damage], fireDir * knockback);
             }
             

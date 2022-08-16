@@ -6,17 +6,22 @@ public class ItemManagerTesting : Editor {
 
     private readonly string[] toolbarOptions = {
         "Pis",
-        "SMG",
+        "DPi",
         "Mag",
+        "SMG",
+        "Sht",
+        "LPi",
         "AR",
-        "Shot",
-        "LazP",
-        "Gat",
-        "Grnd",
-        "Snpr",
-        "LazG",
-        "Rckt",
-        "Rail"
+        "Gnd",
+        "Snp",
+        "Mi",
+        "Rkt",
+        "LRi",
+        "LMi",
+        "SMi",
+        "CL",
+        "Ra",
+        "WE"
 
     };
     int i = 0;

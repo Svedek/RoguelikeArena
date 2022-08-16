@@ -15,11 +15,11 @@ D:/Programming/UnityProjects/RoguelikeArena/RoguelikeArena
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-62054
+49553
 Successfully changed project path to: D:/Programming/UnityProjects/RoguelikeArena/RoguelikeArena
 D:/Programming/UnityProjects/RoguelikeArena/RoguelikeArena
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 48.61 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 45.42 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.25f1 (9b9180224418)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Resources/UnitySubsystems
@@ -35,39 +35,39 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56464
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56452
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002590 seconds.
+Registered in 0.003210 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 43.70 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 44.80 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.583 seconds
+- Completed reload, in  0.613 seconds
 Domain Reload Profiling:
-	ReloadAssembly (583ms)
-		BeginReloadAssembly (56ms)
+	ReloadAssembly (613ms)
+		BeginReloadAssembly (65ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (456ms)
-			LoadAssemblies (54ms)
+		EndReloadAssembly (468ms)
+			LoadAssemblies (62ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (151ms)
+			SetupTypeCache (160ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (175ms)
+			SetupLoadedEditorAssemblies (176ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (44ms)
-				BeforeProcessingInitializeOnLoad (16ms)
-				ProcessInitializeOnLoadAttributes (82ms)
+				RefreshPlugins (45ms)
+				BeforeProcessingInitializeOnLoad (17ms)
+				ProcessInitializeOnLoadAttributes (81ms)
 				ProcessInitializeOnLoadMethodAttributes (27ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -75,52 +75,52 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003233 seconds.
+Registered in 0.003634 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 47.10 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 42.66 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.130 seconds
+- Completed reload, in  1.099 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1131ms)
-		BeginReloadAssembly (139ms)
+	ReloadAssembly (1100ms)
+		BeginReloadAssembly (142ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (18ms)
-		EndReloadAssembly (931ms)
-			LoadAssemblies (89ms)
+		EndReloadAssembly (898ms)
+			LoadAssemblies (87ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (311ms)
+			SetupTypeCache (299ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (51ms)
-			SetupLoadedEditorAssemblies (350ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (344ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (47ms)
-				BeforeProcessingInitializeOnLoad (83ms)
-				ProcessInitializeOnLoadAttributes (191ms)
+				RefreshPlugins (43ms)
+				BeforeProcessingInitializeOnLoad (79ms)
+				ProcessInitializeOnLoadAttributes (195ms)
 				ProcessInitializeOnLoadMethodAttributes (16ms)
-				AfterProcessingInitializeOnLoad (8ms)
+				AfterProcessingInitializeOnLoad (7ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2237 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2238 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 102.8 MB.
 System memory in use after: 102.9 MB.
 
-Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2685.
-Total: 3.062400 ms (FindLiveObjects: 0.224500 ms CreateObjectMapping: 0.088200 ms MarkObjects: 2.691000 ms  DeleteObjects: 0.057800 ms)
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2686.
+Total: 2.802900 ms (FindLiveObjects: 0.207100 ms CreateObjectMapping: 0.096200 ms MarkObjects: 2.444800 ms  DeleteObjects: 0.054100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -134,649 +134,695 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Prefabs/Items/WeaponItems/AR Item.prefab
-  artifactKey: Guid(ddd0c21a8c1896d4cab2e29b105a25a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/AR Item.prefab using Guid(ddd0c21a8c1896d4cab2e29b105a25a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dc7925168b2a4c3ca7889f078c046e8') in 0.121524 seconds 
-  Import took 0.126076 seconds .
+  path: Assets/Prefabs/PlayerWeapons/Guns/54_Railgun.prefab
+  artifactKey: Guid(62b398e9ea298b64e82ab6ac5519c15b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PlayerWeapons/Guns/54_Railgun.prefab using Guid(62b398e9ea298b64e82ab6ac5519c15b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95b15837e6e60ef5c94b13afecaa5694') in 0.143486 seconds 
+  Import took 0.146721 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.87 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 15 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.6 MB.
+System memory in use after: 61.7 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2693.
+Total: 3.026000 ms (FindLiveObjects: 0.175700 ms CreateObjectMapping: 0.098600 ms MarkObjects: 2.738500 ms  DeleteObjects: 0.012300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003464 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.051 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1052ms)
+		BeginReloadAssembly (109ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (882ms)
+			LoadAssemblies (90ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (342ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (311ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (82ms)
+				ProcessInitializeOnLoadAttributes (203ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.45 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2227 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.2 MB.
+System memory in use after: 105.4 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2695.
+Total: 2.803300 ms (FindLiveObjects: 0.149000 ms CreateObjectMapping: 0.072900 ms MarkObjects: 2.561700 ms  DeleteObjects: 0.018600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003522 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.93 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.991 seconds
+Domain Reload Profiling:
+	ReloadAssembly (992ms)
+		BeginReloadAssembly (106ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (824ms)
+			LoadAssemblies (90ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (300ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (296ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (79ms)
+				ProcessInitializeOnLoadAttributes (192ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.45 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2227 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.3 MB.
+System memory in use after: 105.4 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2697.
+Total: 3.508900 ms (FindLiveObjects: 0.209500 ms CreateObjectMapping: 0.101600 ms MarkObjects: 3.170800 ms  DeleteObjects: 0.025300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003079 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.014 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1015ms)
+		BeginReloadAssembly (126ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (827ms)
+			LoadAssemblies (90ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (313ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (289ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (79ms)
+				ProcessInitializeOnLoadAttributes (186ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2227 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.3 MB.
+System memory in use after: 105.4 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2699.
+Total: 2.692300 ms (FindLiveObjects: 0.154200 ms CreateObjectMapping: 0.077800 ms MarkObjects: 2.446200 ms  DeleteObjects: 0.013300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 393.720991 seconds.
+  path: Assets/Prefabs/PlayerWeapons/Guns/54_Railgun.prefab
+  artifactKey: Guid(62b398e9ea298b64e82ab6ac5519c15b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PlayerWeapons/Guns/54_Railgun.prefab using Guid(62b398e9ea298b64e82ab6ac5519c15b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd11344bbb947867ddfd15b5a7f957c4f') in 0.065179 seconds 
+  Import took 0.070484 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.157949 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/SMG Item.prefab
-  artifactKey: Guid(c867a9a3f53fda445bff7415adad7ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/SMG Item.prefab using Guid(c867a9a3f53fda445bff7415adad7ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef0ca66bbc9873fd009d4af6b72333ef') in 0.014317 seconds 
-  Import took 0.017787 seconds .
+  Time since last request: 3.085530 seconds.
+  path: Assets/_Scripts/Weaponry/Bullets/RailgunBeam.cs
+  artifactKey: Guid(eb636d443af12374099a8da370ccb009) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/Weaponry/Bullets/RailgunBeam.cs using Guid(eb636d443af12374099a8da370ccb009) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21d7e01c5786881c73b7ecff7303083e') in 0.012837 seconds 
+  Import took 0.016930 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.388465 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/Pistol Item.prefab
-  artifactKey: Guid(4bdfb78cd6f12c74b838970b9fb64381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/Pistol Item.prefab using Guid(4bdfb78cd6f12c74b838970b9fb64381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a388debba562a1600a2dd431f4a9925') in 0.011495 seconds 
-  Import took 0.015467 seconds .
+  Time since last request: 6.173294 seconds.
+  path: Assets/_Scripts/Weaponry/Bullets/ExplosiveBullet.cs
+  artifactKey: Guid(7727cec563c1a914bb74b266bd73a9c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/Weaponry/Bullets/ExplosiveBullet.cs using Guid(7727cec563c1a914bb74b266bd73a9c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e80ead9841bf9c3f2a088d3def4db7ff') in 0.006056 seconds 
+  Import took 0.009984 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003081 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.010 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1011ms)
+		BeginReloadAssembly (115ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (832ms)
+			LoadAssemblies (91ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (296ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (307ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (86ms)
+				ProcessInitializeOnLoadAttributes (196ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2226 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.3 MB.
+System memory in use after: 105.4 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 2701.
+Total: 2.756000 ms (FindLiveObjects: 0.167200 ms CreateObjectMapping: 0.071000 ms MarkObjects: 2.501100 ms  DeleteObjects: 0.016000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 45.045718 seconds.
+  path: Assets/_Scripts/Weaponry/RailgunWeapon.cs
+  artifactKey: Guid(411a5ae544b58374eaf9c89635f99745) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/Weaponry/RailgunWeapon.cs using Guid(411a5ae544b58374eaf9c89635f99745) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '000d6913c7631cff0f402653e2fa3452') in 0.007422 seconds 
+  Import took 0.010821 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 26.999225 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/SMG Item.prefab
-  artifactKey: Guid(c867a9a3f53fda445bff7415adad7ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/SMG Item.prefab using Guid(c867a9a3f53fda445bff7415adad7ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a40c0939aa150c558d8e3786b7ecba4') in 0.009273 seconds 
-  Import took 0.012549 seconds .
+  Time since last request: 34.468301 seconds.
+  path: Assets/_Scripts/Weaponry/RailgunWeapon.cs
+  artifactKey: Guid(411a5ae544b58374eaf9c89635f99745) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/Weaponry/RailgunWeapon.cs using Guid(411a5ae544b58374eaf9c89635f99745) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28bc32acf529f156daba34e7fd518206') in 0.001989 seconds 
+  Import took 0.005302 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003497 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.059 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1059ms)
+		BeginReloadAssembly (118ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (870ms)
+			LoadAssemblies (100ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (298ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (327ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (81ms)
+				ProcessInitializeOnLoadAttributes (220ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2226 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.2 MB.
+System memory in use after: 105.3 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2703.
+Total: 4.968400 ms (FindLiveObjects: 0.885500 ms CreateObjectMapping: 0.186400 ms MarkObjects: 3.870700 ms  DeleteObjects: 0.023600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 7.205360 seconds.
+  path: Assets/_Scripts/Weaponry/RailgunWeapon.cs
+  artifactKey: Guid(411a5ae544b58374eaf9c89635f99745) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scripts/Weaponry/RailgunWeapon.cs using Guid(411a5ae544b58374eaf9c89635f99745) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2599893b3f705ca3400cb175be711af3') in 0.007228 seconds 
+  Import took 0.012637 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003186 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.079 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1079ms)
+		BeginReloadAssembly (109ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (906ms)
+			LoadAssemblies (94ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (301ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (366ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (94ms)
+				ProcessInitializeOnLoadAttributes (247ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2226 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.3 MB.
+System memory in use after: 105.4 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2705.
+Total: 2.882100 ms (FindLiveObjects: 0.205200 ms CreateObjectMapping: 0.110600 ms MarkObjects: 2.549100 ms  DeleteObjects: 0.016300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003596 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.972 seconds
+Domain Reload Profiling:
+	ReloadAssembly (973ms)
+		BeginReloadAssembly (108ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (805ms)
+			LoadAssemblies (85ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (284ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (295ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (81ms)
+				ProcessInitializeOnLoadAttributes (189ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2226 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.3 MB.
+System memory in use after: 105.4 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2707.
+Total: 2.712100 ms (FindLiveObjects: 0.158600 ms CreateObjectMapping: 0.071800 ms MarkObjects: 2.466700 ms  DeleteObjects: 0.014200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 140.241770 seconds.
+  path: Assets/Prefabs/Items/WeaponItems/60_WorldEnder Item.prefab
+  artifactKey: Guid(1b62dbc8f5ff96542b54eed7bdd458c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Items/WeaponItems/60_WorldEnder Item.prefab using Guid(1b62dbc8f5ff96542b54eed7bdd458c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77b23bdf8ad125c810d6dd6c4bcb8505') in 0.055973 seconds 
+  Import took 0.059339 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.273240 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/Grenade Item.prefab
-  artifactKey: Guid(b79575cd764c3414fb0fb26b2cdcc5bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/Grenade Item.prefab using Guid(b79575cd764c3414fb0fb26b2cdcc5bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bd9d69a2fc788df4438deeaa059d787') in 0.012277 seconds 
-  Import took 0.016148 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.605116 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/Magnum Item.prefab
-  artifactKey: Guid(04e7a0609ced8d14b827e1271a4e0baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/Magnum Item.prefab using Guid(04e7a0609ced8d14b827e1271a4e0baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20756480ca1972148f9433e619852d5c') in 0.011235 seconds 
-  Import took 0.015632 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.707867 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/Railgun Item.prefab
+  Time since last request: 0.578079 seconds.
+  path: Assets/Prefabs/Items/WeaponItems/54_Railgun Item.prefab
   artifactKey: Guid(92533935b23d2e942b7b21e2614b41ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/Railgun Item.prefab using Guid(92533935b23d2e942b7b21e2614b41ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4ee0a3f1ad2633a269a2d8794d1258c') in 0.028906 seconds 
-  Import took 0.032115 seconds .
+Start importing Assets/Prefabs/Items/WeaponItems/54_Railgun Item.prefab using Guid(92533935b23d2e942b7b21e2614b41ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59626f3d8366aea76d0684b25f80544f') in 0.012336 seconds 
+  Import took 0.016570 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.713431 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/Shotgun Item.prefab
-  artifactKey: Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/Shotgun Item.prefab using Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bed443523d020f29078034c6a1d9cc6f') in 0.011655 seconds 
-  Import took 0.015839 seconds .
+  Time since last request: 3.637970 seconds.
+  path: Assets/Prefabs/Items/WeaponItems/53_ClusterLauncher Item.prefab
+  artifactKey: Guid(32d929930e3364844a02a9da58a9ddb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Items/WeaponItems/53_ClusterLauncher Item.prefab using Guid(32d929930e3364844a02a9da58a9ddb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6452bb6266e928c973f33390372fadc6') in 0.009999 seconds 
+  Import took 0.013451 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 56.143679 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/11_SMG Item.prefab
-  artifactKey: Guid(c867a9a3f53fda445bff7415adad7ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/11_SMG Item.prefab using Guid(c867a9a3f53fda445bff7415adad7ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abbad9377e8a0007624906fc2847b242') in 0.012044 seconds 
-  Import took 0.016376 seconds .
+  Time since last request: 3.366628 seconds.
+  path: Assets/Prefabs/Items/WeaponItems/52_SuperMinigun Item.prefab
+  artifactKey: Guid(e4fa4e23fb63eef48847aaa102728cc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Items/WeaponItems/52_SuperMinigun Item.prefab using Guid(e4fa4e23fb63eef48847aaa102728cc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9e09215d4856d36ffe82362d571e540') in 0.016466 seconds 
+  Import took 0.020033 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 4.225981 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/21_AR Item.prefab
-  artifactKey: Guid(ddd0c21a8c1896d4cab2e29b105a25a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/21_AR Item.prefab using Guid(ddd0c21a8c1896d4cab2e29b105a25a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b2d04d4b4d246eb99c8819ceceabfab') in 0.012129 seconds 
-  Import took 0.016422 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.226229 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/Gatling Item.prefab
-  artifactKey: Guid(62b2aeb1a30234844bbb5d083d31f365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/Gatling Item.prefab using Guid(62b2aeb1a30234844bbb5d083d31f365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56e31699e0dec18e85a58ee46e36e4eb') in 0.020186 seconds 
-  Import took 0.023966 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.125493 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/31_Gatling Item.prefab
-  artifactKey: Guid(62b2aeb1a30234844bbb5d083d31f365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/31_Gatling Item.prefab using Guid(62b2aeb1a30234844bbb5d083d31f365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f342d3671a44168b272f37b4f6f9a81') in 0.010642 seconds 
-  Import took 0.014295 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.911844 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/32_Grenade Item.prefab
-  artifactKey: Guid(b79575cd764c3414fb0fb26b2cdcc5bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/32_Grenade Item.prefab using Guid(b79575cd764c3414fb0fb26b2cdcc5bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8771087de789c3e238e4dcd1ea1eb4e') in 0.012111 seconds 
-  Import took 0.016146 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.143921 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/LaserGatling Item.prefab
+  Time since last request: 5.417871 seconds.
+  path: Assets/Prefabs/Items/WeaponItems/51_LaserMinigun Item.prefab
   artifactKey: Guid(5b875977d18f19349875704c3119b3f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/LaserGatling Item.prefab using Guid(5b875977d18f19349875704c3119b3f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be9796110219876fc06c58173ca7d91f') in 0.021272 seconds 
-  Import took 0.025678 seconds .
+Start importing Assets/Prefabs/Items/WeaponItems/51_LaserMinigun Item.prefab using Guid(5b875977d18f19349875704c3119b3f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '544c4440ca459976ecdf7e018fadbfad') in 0.027962 seconds 
+  Import took 0.031188 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.151588 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/41_LaserGatling Item.prefab
-  artifactKey: Guid(5b875977d18f19349875704c3119b3f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/41_LaserGatling Item.prefab using Guid(5b875977d18f19349875704c3119b3f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2be74786a0c0177fa47d9516f151002b') in 0.013988 seconds 
-  Import took 0.017209 seconds .
+  Time since last request: 9.499460 seconds.
+  path: Assets/Prefabs/Items/WeaponItems/41_Minigun Item.prefab
+  artifactKey: Guid(62b2aeb1a30234844bbb5d083d31f365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Items/WeaponItems/41_Minigun Item.prefab using Guid(62b2aeb1a30234844bbb5d083d31f365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27f6271d60b694f2f4aa8abbc816f9f6') in 0.031451 seconds 
+  Import took 0.034721 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.192465 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/LaserPistol Item.prefab
-  artifactKey: Guid(1d500847f3c12f04995c65a3c8e74fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/LaserPistol Item.prefab using Guid(1d500847f3c12f04995c65a3c8e74fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cde64f4a48b46c6c5eda287ee3784324') in 0.026638 seconds 
-  Import took 0.030052 seconds .
+  Time since last request: 2.652929 seconds.
+  path: Assets/Prefabs/Items/WeaponItems/33_Sniper Item.prefab
+  artifactKey: Guid(5c1ae76edaec01047a0ba010ab45e0d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Items/WeaponItems/33_Sniper Item.prefab using Guid(5c1ae76edaec01047a0ba010ab45e0d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b57792d0738cee215141023c2ce52d4') in 0.011013 seconds 
+  Import took 0.015338 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.724448 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/21_LaserPistol Item.prefab
-  artifactKey: Guid(1d500847f3c12f04995c65a3c8e74fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/21_LaserPistol Item.prefab using Guid(1d500847f3c12f04995c65a3c8e74fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ac9b1e7e3cfa3f45270be30ae40b15f') in 0.029584 seconds 
-  Import took 0.032922 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.635923 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/12_Magnum Item.prefab
-  artifactKey: Guid(04e7a0609ced8d14b827e1271a4e0baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/12_Magnum Item.prefab using Guid(04e7a0609ced8d14b827e1271a4e0baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c121f742abfafd50ea980bd832f24d6') in 0.011558 seconds 
-  Import took 0.015213 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.774837 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/01_Pistol Item.prefab
-  artifactKey: Guid(4bdfb78cd6f12c74b838970b9fb64381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/01_Pistol Item.prefab using Guid(4bdfb78cd6f12c74b838970b9fb64381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e22c70c6bd3e9dafcebf3827467b9b1c') in 0.012257 seconds 
-  Import took 0.015951 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.131429 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/43_Railgun Item.prefab
-  artifactKey: Guid(92533935b23d2e942b7b21e2614b41ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/43_Railgun Item.prefab using Guid(92533935b23d2e942b7b21e2614b41ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46fc05f31a05167f22b0042442ccfdd4') in 0.012325 seconds 
-  Import took 0.016264 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.083436 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/RocketLaucnher Item.prefab
-  artifactKey: Guid(a064d4f0bd4462144a89a0983d345a2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/RocketLaucnher Item.prefab using Guid(a064d4f0bd4462144a89a0983d345a2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '546ff03cd294a6f70436fc5967923820') in 0.028003 seconds 
-  Import took 0.031242 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.220622 seconds.
+  Time since last request: 1.455511 seconds.
   path: Assets/Prefabs/Items/WeaponItems/42_RocketLaucnher Item.prefab
   artifactKey: Guid(a064d4f0bd4462144a89a0983d345a2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/42_RocketLaucnher Item.prefab using Guid(a064d4f0bd4462144a89a0983d345a2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb9fd863b234e8b974491110546098f5') in 0.013328 seconds 
-  Import took 0.017388 seconds .
+Start importing Assets/Prefabs/Items/WeaponItems/42_RocketLaucnher Item.prefab using Guid(a064d4f0bd4462144a89a0983d345a2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4373d9d69157f71a39f746c9ecc65336') in 0.010792 seconds 
+  Import took 0.015558 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.206040 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/22_Shotgun Item.prefab
-  artifactKey: Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/22_Shotgun Item.prefab using Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fcea6d46c940db0e90b624beaa84ae3') in 0.020782 seconds 
-  Import took 0.023974 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.263383 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/Sniper Item.prefab
-  artifactKey: Guid(388319e041f8e5744bc1563af1bef32a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/Sniper Item.prefab using Guid(388319e041f8e5744bc1563af1bef32a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbbd6dc0b1900efe21395ea9564ef1c8') in 0.012610 seconds 
-  Import took 0.016028 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.107271 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/33_Sniper Item.prefab
-  artifactKey: Guid(388319e041f8e5744bc1563af1bef32a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/33_Sniper Item.prefab using Guid(388319e041f8e5744bc1563af1bef32a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed406a720fe1fc56da6582b428610961') in 0.012052 seconds 
-  Import took 0.015960 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.108533 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/23_LaserPistol Item.prefab
-  artifactKey: Guid(1d500847f3c12f04995c65a3c8e74fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/23_LaserPistol Item.prefab using Guid(1d500847f3c12f04995c65a3c8e74fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b17a77020c0d69c2689dd1e4ab212184') in 0.012312 seconds 
-  Import took 0.017159 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 81.553774 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/12_Magnum Item.prefab
-  artifactKey: Guid(04e7a0609ced8d14b827e1271a4e0baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/12_Magnum Item.prefab using Guid(04e7a0609ced8d14b827e1271a4e0baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd2d2b2e49a804b216908748fc9be678') in 0.009925 seconds 
-  Import took 0.013601 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 33.556772 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/11_SMG Item.prefab
-  artifactKey: Guid(c867a9a3f53fda445bff7415adad7ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/11_SMG Item.prefab using Guid(c867a9a3f53fda445bff7415adad7ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75149907f3ab3683c8eb08017ee925d8') in 0.009726 seconds 
-  Import took 0.013546 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.952402 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/12_Magnum Item.prefab
-  artifactKey: Guid(04e7a0609ced8d14b827e1271a4e0baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/12_Magnum Item.prefab using Guid(04e7a0609ced8d14b827e1271a4e0baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6110ef3ea43de8b03b699331d16662e') in 0.008875 seconds 
-  Import took 0.013471 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 29.119448 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/21_AR Item.prefab
-  artifactKey: Guid(ddd0c21a8c1896d4cab2e29b105a25a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/21_AR Item.prefab using Guid(ddd0c21a8c1896d4cab2e29b105a25a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f84269c4827c62a22edbf4ce083dda24') in 0.022311 seconds 
-  Import took 0.025816 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.194881 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/21_AR Item.prefab
-  artifactKey: Guid(ddd0c21a8c1896d4cab2e29b105a25a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/21_AR Item.prefab using Guid(ddd0c21a8c1896d4cab2e29b105a25a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3ef9382258a09f12bb446e3c60bfb0a') in 0.009057 seconds 
-  Import took 0.012638 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.270009 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/21_AR Item.prefab
-  artifactKey: Guid(ddd0c21a8c1896d4cab2e29b105a25a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/21_AR Item.prefab using Guid(ddd0c21a8c1896d4cab2e29b105a25a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '925374a2e34aa2eb91a1b64bc6d98033') in 0.007897 seconds 
-  Import took 0.011214 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.231003 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/21_AR Item.prefab
-  artifactKey: Guid(ddd0c21a8c1896d4cab2e29b105a25a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/21_AR Item.prefab using Guid(ddd0c21a8c1896d4cab2e29b105a25a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54920a295d9cdaa3fc2844d19ee63da0') in 0.008202 seconds 
-  Import took 0.012603 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 62.921319 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/12_Magnum Item.prefab
-  artifactKey: Guid(04e7a0609ced8d14b827e1271a4e0baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/12_Magnum Item.prefab using Guid(04e7a0609ced8d14b827e1271a4e0baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac528b4d7a511c18f07c9da0aed8f49e') in 0.007103 seconds 
-  Import took 0.011423 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.962390 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/22_Shotgun Item.prefab
-  artifactKey: Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/22_Shotgun Item.prefab using Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b3987c59e7a546760a7c2e93448eb94') in 0.009552 seconds 
-  Import took 0.013326 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.602040 seconds.
-  path: Assets/Prefabs/Level/RoomParts/ShopStall.prefab
-  artifactKey: Guid(97a2c98290dcf434093709b98fb14d3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Level/RoomParts/ShopStall.prefab using Guid(97a2c98290dcf434093709b98fb14d3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '833c73d687f8ad059408f650fbd43a0e') in 0.046597 seconds 
-  Import took 0.049836 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.688597 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/22_Shotgun Item.prefab
-  artifactKey: Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/22_Shotgun Item.prefab using Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f62c223a242944a1335f5cb1a16811cf') in 0.012342 seconds 
-  Import took 0.015676 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.696917 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/22_Shotgun Item.prefab
-  artifactKey: Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/22_Shotgun Item.prefab using Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93f3918cb4b8c2395d023138847ac9d6') in 0.019798 seconds 
-  Import took 0.023561 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.849446 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/22_Shotgun Item.prefab
-  artifactKey: Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/22_Shotgun Item.prefab using Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4eb220982c1769dc1adebdd8a385ced') in 0.017318 seconds 
-  Import took 0.021031 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 25.624776 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/23_LaserPistol Item.prefab
-  artifactKey: Guid(1d500847f3c12f04995c65a3c8e74fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/23_LaserPistol Item.prefab using Guid(1d500847f3c12f04995c65a3c8e74fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c289bc337d91170350ec1c163268975e') in 0.010356 seconds 
-  Import took 0.013559 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 78.399085 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/23_LaserPistol Item.prefab
-  artifactKey: Guid(1d500847f3c12f04995c65a3c8e74fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/23_LaserPistol Item.prefab using Guid(1d500847f3c12f04995c65a3c8e74fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a0c85bb5879ba7fae024fe851cec135') in 0.016404 seconds 
-  Import took 0.020893 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 29.704655 seconds.
-  path: Assets/Prefabs/PlayerWeapons/Guns/23_LaserPistol.prefab
-  artifactKey: Guid(e61e322a07a5cb74dbdcf0bd13df1cbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlayerWeapons/Guns/23_LaserPistol.prefab using Guid(e61e322a07a5cb74dbdcf0bd13df1cbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ffbadaaaf9b344472fb4e107b1f3da0') in 0.013600 seconds 
-  Import took 0.017001 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 49.754171 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/23_LaserPistol Item.prefab
-  artifactKey: Guid(1d500847f3c12f04995c65a3c8e74fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/23_LaserPistol Item.prefab using Guid(1d500847f3c12f04995c65a3c8e74fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf8a3541a62692a3fa169abe8e70be89') in 0.007983 seconds 
-  Import took 0.011712 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.518685 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/22_Shotgun Item.prefab
-  artifactKey: Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/22_Shotgun Item.prefab using Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82ef2018430b70f3aed60bd5121a1257') in 0.007415 seconds 
-  Import took 0.010690 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.343556 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/22_Shotgun Item.prefab
-  artifactKey: Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/22_Shotgun Item.prefab using Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1e590bff518886930fd1a0535c43d9c') in 0.016678 seconds 
-  Import took 0.019938 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.930317 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/22_Shotgun Item.prefab
-  artifactKey: Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/22_Shotgun Item.prefab using Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5db6e8c95a13756ed9f6ddb50e843821') in 0.007433 seconds 
-  Import took 0.010887 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.962074 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/21_AR Item.prefab
-  artifactKey: Guid(ddd0c21a8c1896d4cab2e29b105a25a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/21_AR Item.prefab using Guid(ddd0c21a8c1896d4cab2e29b105a25a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca4c70647ed9d3b425a3af47256e0848') in 0.007569 seconds 
-  Import took 0.010989 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.946541 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/12_Magnum Item.prefab
-  artifactKey: Guid(04e7a0609ced8d14b827e1271a4e0baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/12_Magnum Item.prefab using Guid(04e7a0609ced8d14b827e1271a4e0baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66d1b3b223983c547552f10b7714ed21') in 0.011922 seconds 
-  Import took 0.015127 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.612769 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/12_Magnum Item.prefab
-  artifactKey: Guid(04e7a0609ced8d14b827e1271a4e0baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/12_Magnum Item.prefab using Guid(04e7a0609ced8d14b827e1271a4e0baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57b4749d415eb03b23491ef021f1f5ec') in 0.015065 seconds 
-  Import took 0.018272 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.370917 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/11_SMG Item.prefab
-  artifactKey: Guid(c867a9a3f53fda445bff7415adad7ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/11_SMG Item.prefab using Guid(c867a9a3f53fda445bff7415adad7ef2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78a2f64e346a963785ff558e6043939a') in 0.017274 seconds 
-  Import took 0.020567 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.788736 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/12_Magnum Item.prefab
-  artifactKey: Guid(04e7a0609ced8d14b827e1271a4e0baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/12_Magnum Item.prefab using Guid(04e7a0609ced8d14b827e1271a4e0baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9e3be0cbebe4c0cc67c7785fb818711') in 0.007741 seconds 
-  Import took 0.011469 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.514046 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/21_AR Item.prefab
-  artifactKey: Guid(ddd0c21a8c1896d4cab2e29b105a25a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/21_AR Item.prefab using Guid(ddd0c21a8c1896d4cab2e29b105a25a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3e62d1483da18ece7badd09b4e2679f') in 0.009775 seconds 
-  Import took 0.013445 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.853008 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/22_Shotgun Item.prefab
-  artifactKey: Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/22_Shotgun Item.prefab using Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90d6fb6be150edfee0c7cdab7d46038e') in 0.014908 seconds 
-  Import took 0.018461 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.110450 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/23_LaserPistol Item.prefab
-  artifactKey: Guid(1d500847f3c12f04995c65a3c8e74fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/23_LaserPistol Item.prefab using Guid(1d500847f3c12f04995c65a3c8e74fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4635a8aa44b9f5322fd719dbc725f63c') in 0.011784 seconds 
-  Import took 0.016355 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 66.670554 seconds.
-  path: Assets/Prefabs/PlayerWeapons/Bullets/42_Rocket.prefab
-  artifactKey: Guid(e9397cc95f0ddd547952917b3f71d2e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlayerWeapons/Bullets/42_Rocket.prefab using Guid(e9397cc95f0ddd547952917b3f71d2e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d3e87f349d2317fdd241e1f6bbb26cc') in 0.013400 seconds 
-  Import took 0.016771 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 46.112342 seconds.
-  path: Assets/Prefabs/PlayerWeapons/Guns/41_LaserGatling.prefab
-  artifactKey: Guid(8c9ae98e4d6ca9448a531768425cad3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlayerWeapons/Guns/41_LaserGatling.prefab using Guid(8c9ae98e4d6ca9448a531768425cad3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '504ccad03f9a1ce362a5ea7c80be2ea2') in 0.023309 seconds 
-  Import took 0.026714 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 31.331238 seconds.
+  Time since last request: 4.916733 seconds.
   path: Assets/Prefabs/Items/WeaponItems/32_Grenade Item.prefab
   artifactKey: Guid(b79575cd764c3414fb0fb26b2cdcc5bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/32_Grenade Item.prefab using Guid(b79575cd764c3414fb0fb26b2cdcc5bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1a8df6e7fb7b2957bc0bdacc1d04dd7') in 0.019427 seconds 
-  Import took 0.023047 seconds .
+Start importing Assets/Prefabs/Items/WeaponItems/32_Grenade Item.prefab using Guid(b79575cd764c3414fb0fb26b2cdcc5bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2e352b5d2b614484442259fb0956349') in 0.027684 seconds 
+  Import took 0.031290 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.628513 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/32_Grenade Item.prefab
-  artifactKey: Guid(b79575cd764c3414fb0fb26b2cdcc5bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/32_Grenade Item.prefab using Guid(b79575cd764c3414fb0fb26b2cdcc5bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd24d4488ff1fac8b786f37fa1fc1014') in 0.028688 seconds 
-  Import took 0.032040 seconds .
+  Time since last request: 9.945693 seconds.
+  path: Assets/Prefabs/Items/WeaponItems/22_Shotgun Item.prefab
+  artifactKey: Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Items/WeaponItems/22_Shotgun Item.prefab using Guid(f39afe09fa3230a4e998d4509baff0a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7bb530f3451fcc62f9e573408dae07b') in 0.013654 seconds 
+  Import took 0.017359 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 13.272274 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/32_Grenade Item.prefab
-  artifactKey: Guid(b79575cd764c3414fb0fb26b2cdcc5bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/32_Grenade Item.prefab using Guid(b79575cd764c3414fb0fb26b2cdcc5bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02d2686f8ece9d9bc40c33c1b1517017') in 0.022461 seconds 
-  Import took 0.026808 seconds .
+  Time since last request: 11.220261 seconds.
+  path: Assets/Prefabs/Items/WeaponItems/23_LaserPistol Item.prefab
+  artifactKey: Guid(1d500847f3c12f04995c65a3c8e74fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Items/WeaponItems/23_LaserPistol Item.prefab using Guid(1d500847f3c12f04995c65a3c8e74fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b34b6add9802a281734c8327aa7d8026') in 0.013378 seconds 
+  Import took 0.017963 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 208.223191 seconds.
-  path: Assets/Prefabs/PlayerWeapons/Guns/52_ClusterLauncher.prefab
-  artifactKey: Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlayerWeapons/Guns/52_ClusterLauncher.prefab using Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1253e16950d23c67adc3a909b316a8a4') in 0.031698 seconds 
-  Import took 0.037728 seconds .
+  Time since last request: 14.157833 seconds.
+  path: Assets/Prefabs/PlayerWeapons/Guns/54_Railgun.prefab
+  artifactKey: Guid(62b398e9ea298b64e82ab6ac5519c15b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PlayerWeapons/Guns/54_Railgun.prefab using Guid(62b398e9ea298b64e82ab6ac5519c15b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '337ee79e2ca68c4715773e93c37dd951') in 0.011043 seconds 
+  Import took 0.014409 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.913081 seconds.
-  path: Assets/Prefabs/PlayerWeapons/Guns/52_ClusterLauncher.prefab
-  artifactKey: Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlayerWeapons/Guns/52_ClusterLauncher.prefab using Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93a8766978326075b69c8b62dcf61fc8') in 0.011779 seconds 
-  Import took 0.015628 seconds .
+  Time since last request: 28.510645 seconds.
+  path: Assets/Prefabs/PlayerWeapons/Guns/54_Railgun.prefab
+  artifactKey: Guid(62b398e9ea298b64e82ab6ac5519c15b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PlayerWeapons/Guns/54_Railgun.prefab using Guid(62b398e9ea298b64e82ab6ac5519c15b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63cf982f01aa2f87b7f96c303c669703') in 0.010742 seconds 
+  Import took 0.014381 seconds .
 
 ========================================================================
-Received Import Request.
-  Time since last request: 6.943340 seconds.
-  path: Assets/Prefabs/PlayerWeapons/Guns/52_ClusterLauncher.prefab
-  artifactKey: Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlayerWeapons/Guns/52_ClusterLauncher.prefab using Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '516c6b7ba6d236b114e7060c6b8eb899') in 0.008725 seconds 
-  Import took 0.012815 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003409 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.020 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1021ms)
+		BeginReloadAssembly (120ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (840ms)
+			LoadAssemblies (96ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (302ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (303ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (83ms)
+				ProcessInitializeOnLoadAttributes (196ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2226 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.5 MB.
+System memory in use after: 105.6 MB.
 
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2710.
+Total: 2.723900 ms (FindLiveObjects: 0.153200 ms CreateObjectMapping: 0.071600 ms MarkObjects: 2.484100 ms  DeleteObjects: 0.013800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Import Request.
-  Time since last request: 41.457443 seconds.
-  path: Assets/Prefabs/PlayerWeapons/Bullets/52_ClusterExplosion.prefab
-  artifactKey: Guid(3ae4600c07a0e3d4ab6fece66c851ac1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlayerWeapons/Bullets/52_ClusterExplosion.prefab using Guid(3ae4600c07a0e3d4ab6fece66c851ac1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33d41c0a41d037929477c55d5a70ed72') in 0.019801 seconds 
-  Import took 0.023291 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003765 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.016 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1016ms)
+		BeginReloadAssembly (122ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (833ms)
+			LoadAssemblies (94ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (293ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (303ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (89ms)
+				ProcessInitializeOnLoadAttributes (188ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2226 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.5 MB.
+System memory in use after: 105.6 MB.
 
-========================================================================
-Received Import Request.
-  Time since last request: 4.121286 seconds.
-  path: Assets/Prefabs/PlayerWeapons/Bullets/52_ClusterRocket.prefab
-  artifactKey: Guid(918b9a60e42ab8a4398df9e119c75a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlayerWeapons/Bullets/52_ClusterRocket.prefab using Guid(918b9a60e42ab8a4398df9e119c75a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2d7093128f8d108340c979644a893cf') in 0.019989 seconds 
-  Import took 0.024573 seconds .
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 2712.
+Total: 2.860800 ms (FindLiveObjects: 0.163500 ms CreateObjectMapping: 0.083800 ms MarkObjects: 2.595200 ms  DeleteObjects: 0.017400 ms)
 
-========================================================================
-Received Import Request.
-  Time since last request: 13.124031 seconds.
-  path: Assets/Prefabs/PlayerWeapons/Guns/52_ClusterLauncher.prefab
-  artifactKey: Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlayerWeapons/Guns/52_ClusterLauncher.prefab using Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d2dde87dda9bcf93449c1cdfb8b7612') in 0.021099 seconds 
-  Import took 0.025818 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.030312 seconds.
-  path: Assets/Prefabs/PlayerWeapons/Guns/52_ClusterLauncher.prefab
-  artifactKey: Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlayerWeapons/Guns/52_ClusterLauncher.prefab using Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88ae118bc6da123ad34324e33dc04e07') in 0.009118 seconds 
-  Import took 0.013189 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.420606 seconds.
-  path: Assets/Prefabs/PlayerWeapons/Bullets/52_ClusterRocket.prefab
-  artifactKey: Guid(918b9a60e42ab8a4398df9e119c75a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlayerWeapons/Bullets/52_ClusterRocket.prefab using Guid(918b9a60e42ab8a4398df9e119c75a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca29469c4f8b73ccad2b792cde173103') in 0.019972 seconds 
-  Import took 0.023456 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.333557 seconds.
-  path: Assets/Prefabs/PlayerWeapons/Bullets/52_ClusterRocket.prefab
-  artifactKey: Guid(918b9a60e42ab8a4398df9e119c75a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlayerWeapons/Bullets/52_ClusterRocket.prefab using Guid(918b9a60e42ab8a4398df9e119c75a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '750d7e00bec2f19050cda059f9efaf4a') in 0.010799 seconds 
-  Import took 0.014288 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.211081 seconds.
-  path: Assets/Prefabs/PlayerWeapons/Bullets/52_ClusterRocket.prefab
-  artifactKey: Guid(918b9a60e42ab8a4398df9e119c75a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlayerWeapons/Bullets/52_ClusterRocket.prefab using Guid(918b9a60e42ab8a4398df9e119c75a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cc46b626fcad7c65d19f82ec34af490') in 0.007019 seconds 
-  Import took 0.010438 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 39.156679 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/52_ClusterLauncher.prefab
-  artifactKey: Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/52_ClusterLauncher.prefab using Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95585c2ad2c04f6843f1ca946ea57545') in 0.021094 seconds 
-  Import took 0.025486 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.918840 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/52_ClusterLauncher.prefab
-  artifactKey: Guid(32d929930e3364844a02a9da58a9ddb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/52_ClusterLauncher.prefab using Guid(32d929930e3364844a02a9da58a9ddb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24b246343610970a54bafe61434e42b8') in 0.018576 seconds 
-  Import took 0.022646 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.655698 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/52_ClusterLauncher.prefab
-  artifactKey: Guid(32d929930e3364844a02a9da58a9ddb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/52_ClusterLauncher.prefab using Guid(32d929930e3364844a02a9da58a9ddb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c130278bef0912341b84b6facc53cf6') in 0.010677 seconds 
-  Import took 0.015235 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.878141 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/52_ClusterLauncher.prefab
-  artifactKey: Guid(32d929930e3364844a02a9da58a9ddb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/52_ClusterLauncher.prefab using Guid(32d929930e3364844a02a9da58a9ddb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '117717fb4728b13eb255839c6528838c') in 0.008344 seconds 
-  Import took 0.012160 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 37.939775 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/52_ClusterLauncher.prefab
-  artifactKey: Guid(32d929930e3364844a02a9da58a9ddb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/52_ClusterLauncher.prefab using Guid(32d929930e3364844a02a9da58a9ddb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf51f500dd8d4fd9977eb51b3162f4f3') in 0.024308 seconds 
-  Import took 0.028670 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.568009 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/52_ClusterLauncher.prefab
-  artifactKey: Guid(32d929930e3364844a02a9da58a9ddb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/52_ClusterLauncher.prefab using Guid(32d929930e3364844a02a9da58a9ddb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b57737aa4fd1782c0a44a157f13cbbac') in 0.010795 seconds 
-  Import took 0.014393 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.091659 seconds.
-  path: Assets/Prefabs/Items/WeaponItems/52_ClusterLauncher.prefab
-  artifactKey: Guid(32d929930e3364844a02a9da58a9ddb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Items/WeaponItems/52_ClusterLauncher.prefab using Guid(32d929930e3364844a02a9da58a9ddb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3d6c9cf73edc806f7462afe2bc149f8') in 0.026138 seconds 
-  Import took 0.029937 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 33.183259 seconds.
-  path: Assets/Prefabs/PlayerWeapons/Guns/52_ClusterLauncher.prefab
-  artifactKey: Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlayerWeapons/Guns/52_ClusterLauncher.prefab using Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5560b075aa58d8cd02651defe207837') in 0.012516 seconds 
-  Import took 0.015935 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.796642 seconds.
-  path: Assets/Prefabs/PlayerWeapons/Guns/52_ClusterLauncher.prefab
-  artifactKey: Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlayerWeapons/Guns/52_ClusterLauncher.prefab using Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fce4cda9cf4eaf76c9d4d0f7a22a253') in 0.010261 seconds 
-  Import took 0.013883 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.666465 seconds.
-  path: Assets/Prefabs/PlayerWeapons/Guns/52_ClusterLauncher.prefab
-  artifactKey: Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlayerWeapons/Guns/52_ClusterLauncher.prefab using Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dd1b930bb2b116ba1cb34f969421bd7') in 0.008242 seconds 
-  Import took 0.011914 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.492348 seconds.
-  path: Assets/Prefabs/PlayerWeapons/Guns/52_ClusterLauncher.prefab
-  artifactKey: Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlayerWeapons/Guns/52_ClusterLauncher.prefab using Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a684b97b356b09dafd40c7e00bedb22a') in 0.008685 seconds 
-  Import took 0.012103 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.946460 seconds.
-  path: Assets/Prefabs/PlayerWeapons/Guns/52_ClusterLauncher.prefab
-  artifactKey: Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/PlayerWeapons/Guns/52_ClusterLauncher.prefab using Guid(3df4a05e445d46648a074b36fdf67614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76a28c7c5e544010de7ffb5e567ce097') in 0.018572 seconds 
-  Import took 0.022328 seconds .
-
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
