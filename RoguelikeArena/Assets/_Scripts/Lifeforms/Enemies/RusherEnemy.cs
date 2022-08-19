@@ -31,12 +31,6 @@ public class RusherEnemy : Enemy {
     [SerializeField] private float knockback;
     private const float attackDelay = 0.2f;
     private bool attackReady = true;
-    /*private void OnCollisionEnter2D(Collision2D collision) {
-        PlayerController play = collision.gameObject.GetComponent<PlayerController>();
-        if (play != null) {
-            play.TakeDamage(damage, moveDir.normalized * knockback);
-        }
-    }*/
     private void OnCollisionStay2D(Collision2D collision) {
         if (!attackReady) return;
 
