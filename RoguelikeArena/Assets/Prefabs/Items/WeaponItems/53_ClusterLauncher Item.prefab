@@ -96,6 +96,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleText: Ash
-  descText: All that shall remain is...
+  descText: All that shall remains...
   cost: 1500
   id: 14

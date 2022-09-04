@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleText: Lights out
-  descText: 
-  cost: 0
+  descText: '+Laser Bullets
+
+    +Pierce'
+  cost: 1250
   id: 12

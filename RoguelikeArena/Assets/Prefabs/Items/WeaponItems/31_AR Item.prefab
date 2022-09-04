@@ -99,5 +99,5 @@ MonoBehaviour:
   descText: '+ Damage
 
     + Bullet Velocity'
-  cost: 0
-  id: 3
+  cost: 175
+  id: 6

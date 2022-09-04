@@ -96,6 +96,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleText: Sniper
-  descText: 
-  cost: 30
+  descText: '+Dmg
+
+    +Pierce
+
+    -Laser Bullets'
+  cost: 130
   id: 8

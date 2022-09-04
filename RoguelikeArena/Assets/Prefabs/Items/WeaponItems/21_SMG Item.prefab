@@ -97,5 +97,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleText: SMG
   descText: ++ Fire Rate
-  cost: 50
+  cost: 75
   id: 3

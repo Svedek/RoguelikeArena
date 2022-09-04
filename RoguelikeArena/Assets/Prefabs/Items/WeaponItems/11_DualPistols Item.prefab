@@ -96,6 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleText: Dual Pistols
-  descText: 
-  cost: 40
+  descText: '+ Fire Rate
+
+
+    You hold them in the same hand...'
+  cost: 25
   id: 1

@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -11,11 +11,11 @@ public class OptionsMenu : MonoBehaviour {
 
     [SerializeField] GameObject[] standaloneExclusiveOptions;
     void Awake() {
-        #if UNITY_STANDALONE
+#if UNITY_STANDALONE
         foreach (GameObject option in standaloneExclusiveOptions) {
             option.SetActive(true);
         }
-        #endif
+#endif
 
 #if UNITY_WEBGL
         foreach (GameObject option in standaloneExclusiveOptions) {
@@ -24,13 +24,23 @@ public class OptionsMenu : MonoBehaviour {
 #endif
     }
 
+
+    private static Options Data = new Options();
+
+    private class Options {
+
+        public int GUIIndex = 2;
+
+    }
+
     private Resolution[] resolutions;
     private void Start() {
         // TODO load data if stored in file / cookies
 
         // TODO set buttons to the value of those settings
+        guiScaleText.text = "GUI Scale: " + guiScales[Data.GUIIndex];
 
-        #if UNITY_STANDALONE
+#if UNITY_STANDALONE
 
         resolutions = Screen.resolutions;
 
@@ -49,7 +59,7 @@ public class OptionsMenu : MonoBehaviour {
         resolutionDropdown.AddOptions(resolutionOptions);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
-        #endif
+#endif
     }
 
     public void SetVolumeMaster(float volume) => audioMixer.SetFloat("MasterVolume", volume);
@@ -68,13 +78,20 @@ public class OptionsMenu : MonoBehaviour {
 
 
     [SerializeField] Text guiScaleText;
-    int guiScaleIndex = 2;
-    private readonly float[] guiScales = {
+    private static readonly float[] guiScales = {
         0.5f, 0.75f, 1f, 1.25f, 1.5f, 2f
     };
+
+
+    public static event Action OnGUIScaleChanged;
+    public static float GetGUIScale() {
+        return guiScales[Data.GUIIndex];
+    }
+
     public void ChangeGUIScale() {
-        guiScaleIndex = (guiScaleIndex + 1) % guiScales.Length;
-        guiScaleText.text = "GUI Scale: " + guiScales[guiScaleIndex];
-        // TODO change guiscale to guiScales[guiScaleIndex];
+        Data.GUIIndex = (Data.GUIIndex + 1) % guiScales.Length;
+        guiScaleText.text = "GUI Scale: " + guiScales[Data.GUIIndex];
+
+        OnGUIScaleChanged?.Invoke();
     }
 }

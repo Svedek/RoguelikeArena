@@ -101,5 +101,5 @@ MonoBehaviour:
     + Damage
 
     - Fire Rate'
-  cost: 0
+  cost: 100
   id: 4

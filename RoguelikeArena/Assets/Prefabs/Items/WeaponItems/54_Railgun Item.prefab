@@ -96,6 +96,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleText: Decimator
-  descText: 
-  cost: 500
+  descText: +BEAM SNIPER
+  cost: 1000
   id: 15

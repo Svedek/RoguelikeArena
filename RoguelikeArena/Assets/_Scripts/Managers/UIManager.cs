@@ -27,6 +27,14 @@ public class UIManager : MonoBehaviour {
         // Initialize UIManager
         SetDefaultValues();
         HideUpgradeOptions();
+
+
+        ResizeGUI();
+        OptionsMenu.OnGUIScaleChanged += ResizeGUI;
+    }
+
+    private void OnDestroy() {
+        OptionsMenu.OnGUIScaleChanged -= ResizeGUI;
     }
 
     /*
@@ -38,9 +46,10 @@ public class UIManager : MonoBehaviour {
 
     #region GUI Main
     [SerializeField] GameObject[] uiFolders;
-    public void ResizeGUI(float scale) {
+
+    private void ResizeGUI() {
         for(int i = 0; i<uiFolders.Length; i++) {
-            uiFolders[i].transform.localScale = Vector3.one*scale;
+            uiFolders[i].transform.localScale = Vector3.one * OptionsMenu.GetGUIScale();
         }
     }
 

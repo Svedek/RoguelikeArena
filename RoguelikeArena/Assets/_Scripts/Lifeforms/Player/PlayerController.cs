@@ -273,7 +273,7 @@ public class PlayerController : Health {
     private StatID[] ids;
 
     public void GainExperience(float experience) {
-        Debug.Log("cXp: " + currentExp + " XpG: " + experience + " RXp: " + requiredExp);
+        //Debug.Log("cXp: " + currentExp + " XpG: " + experience + " RXp: " + requiredExp);
         currentExp += experience * stats[(int)StatID.expMod];
         while (currentExp >= requiredExp) {
             // Handle Experience
@@ -297,7 +297,7 @@ public class PlayerController : Health {
     }
     private void SetLevelExpRequirement() {
         // (1,11) (2,16.2) (3, 22.5) (4,29.6) (5,37.4)
-        requiredExp = Mathf.Pow(level, 1.7f) + (level * 3) + (7);
+        requiredExp = Mathf.Pow(level, 1.8f) + (level * 3) + 7;
     }
     private void SetupLevelUpgrades() {
         ids = new StatID[3];
@@ -320,7 +320,13 @@ public class PlayerController : Health {
 
     private void HandleUpgrade() {
         var id = ids[input.upgradeSelected];
+
         ApplyUpgrade(id);
+        if (id == StatID.maxHealth) {
+            health *= increaseAmmount[(int)StatID.maxHealth];
+            // UIManager.Instance.UpdateHealth(health, stats[(int)StatID.maxHealth]);
+        }
+
         upgradesActive = false;
 
         if (--upgradePoints > 0) {
@@ -452,7 +458,7 @@ public class PlayerController : Health {
 
     #region Room Interaction
     [Header("Room Interaction")]
-    [SerializeField] SpriteRenderer interactionPrompt;
+    [SerializeField] GameObject interactionPrompt;
     private Interactable currentInteraction;
 
     public void InteractionEnter(Interactable interaction) {
@@ -475,10 +481,10 @@ public class PlayerController : Health {
 
     private void ActivateInteractionPrompt() {
         // TODO VFX
-        interactionPrompt.enabled = true;
+        interactionPrompt.SetActive(true);
     }
     private void DisableInteractionPrompt() {
-        interactionPrompt.enabled = false;
+        interactionPrompt.SetActive(false);
     }
     #endregion
 

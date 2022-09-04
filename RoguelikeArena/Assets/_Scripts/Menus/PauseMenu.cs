@@ -13,11 +13,30 @@ public class PauseMenu : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    void Awake() {
-        
+
+    [SerializeField] Canvas optionsCanvas;
+    public void OpenOptions() {
+        GetComponent<Canvas>().enabled = false;
+        optionsCanvas.enabled = true;
+    }
+    public void ReturnFromOptions() {
+        GetComponent<Canvas>().enabled = true;
+        optionsCanvas.enabled = false;
     }
 
-    void Update() {
-        
+
+    Canvas canvas;
+    private void Awake() {
+        canvas = GetComponent<Canvas>();
+        GameManager.OnGameStateChanged += OnGameStateChanged;
+    }
+
+    private void OnDestroy() {
+        GameManager.OnGameStateChanged -= OnGameStateChanged;
+    }
+
+    private void OnGameStateChanged(GameState state) {
+        canvas.enabled = state == GameState.Paused;
+        if (state == GameState.Playing) optionsCanvas.enabled = false;
     }
 }

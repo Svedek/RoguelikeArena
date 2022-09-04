@@ -99,5 +99,5 @@ MonoBehaviour:
   descText: '+ Laser Bullets
 
     + Damage'
-  cost: 0
+  cost: 60
   id: 5

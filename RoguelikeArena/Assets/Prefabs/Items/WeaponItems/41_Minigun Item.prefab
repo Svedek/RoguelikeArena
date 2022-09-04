@@ -97,5 +97,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleText: Minigun
   descText: ++ Fire rate
-  cost: 0
+  cost: 450
   id: 9

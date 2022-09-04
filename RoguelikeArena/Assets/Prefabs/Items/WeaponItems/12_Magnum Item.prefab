@@ -101,5 +101,5 @@ MonoBehaviour:
     + Damage
 
     + Bullet Velocity'
-  cost: 30
+  cost: 40
   id: 2

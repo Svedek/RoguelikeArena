@@ -96,10 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleText: Rocket Launcher
-  descText: '++ Pierce
-
-    +Damage
+  descText: '+Damage
 
     +Range'
-  cost: 500
+  cost: 600
   id: 10

@@ -96,10 +96,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleText: Laser Rifle
-  descText: '++ Pierce
+  descText: '+Pierce
 
     +Damage
 
-    +Range'
-  cost: 0
+    +Range
+
+    +Laser Bullets'
+  cost: 400
   id: 11

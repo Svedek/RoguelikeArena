@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleText: Brass Helix
-  descText: '+ Free cookie c:'
-  cost: 30
+  descText: '+ Free cookie c:
+
+    ++Bullets'
+  cost: 1250
   id: 13
